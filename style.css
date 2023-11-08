@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --imgList-Width : 500px;
+}
+.container {
+    width: 80%;
+    margin-inline: auto;
+    background-color: antiquewhite;
+    overflow: hidden;    
+}
+.slide-Wrapper {
+    position: relative;
+}
+.slide-Wrapper .preNextBtns {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+}
+.slide-Wrapper .previousBtn {
+    display: none;
+    left: 200px;
+}
+.slide-Wrapper .nextBtn {
+    right: 200px;
+}
+
+.slide-Wrapper .img-List {
+    display: flex;
+    width: var(--imgList-Width);
+    margin-inline: auto;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+.slide-Wrapper .img-List::-webkit-scrollbar {
+    display: none;
+}
+.slide-Wrapper .img-List .slide-Images {
+    width: var(--imgList-Width);
+    /* aspect-ratio: 1 / 1; */
+}
+.scrollBar-Wrapper {
+    margin: auto;
+    width: var(--imgList-Width);
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.scrollBar-Wrapper .scrollBar-Track {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(206, 206, 206);
+    border-radius: 5px;
+    position: relative;
+}
+.scrollBar-Wrapper:hover .scrollBar-Track {
+    height: 5px;
+}
+
+.scrollBar-Wrapper .scrollBar-Track .scrollBar-Thumb {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background-color: #333;
+    border-radius: inherit;
+    cursor: grab;
+} 
+.scrollBar-Wrapper .scrollBar-Track .scrollBar-Thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -1.5px;
+}
+.scrollBar-Wrapper .scrollBar-Track .scrollBar-Thumb::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+
+
+
