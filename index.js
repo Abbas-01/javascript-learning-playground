@@ -1,6 +1,3 @@
-function wordBlank (myNoun, myAdjective, myVerb, myAdverb) {
-    let sentence = "";
-    sentence += "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb;
-    return sentence;
-}
-console.log(wordBlank("Dog", "Playful", "jumps", "happily"));
+let x = [['Abbas', 1], ['Asad', 2], ['Farzain', 3], ['Haseeb', 4]];
+let pop = x[2].shift();
+console.log(pop); 
