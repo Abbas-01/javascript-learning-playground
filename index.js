@@ -1,8 +1,12 @@
-function blockScope() {
-    var x = 2;
-    return x;
+function itemList(arr, item) {
+    arr.shift();
+    arr.push(item);
 }
-blockScope();
 
-let a = x;
-console.log(a);
+let itemsArr = ["Chips", "Coke", "Chicken", "Chocolate"];
+
+console.log(itemsArr);
+
+itemList(itemsArr, "Burger");
+
+console.log(itemsArr);
