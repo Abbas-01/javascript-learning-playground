@@ -1,3 +1,2 @@
-let x = 10;
-x /= 5;
+let x = "This is a message for \"Abbas\" Thanks";
 console.log(x);
