@@ -1,3 +1,8 @@
-let x = [['Abbas', 1], ['Asad', 2], ['Farzain', 3], ['Haseeb', 4]];
-let pop = x[2].shift();
-console.log(pop); 
+function blockScope() {
+    var x = 2;
+    return x;
+}
+blockScope();
+
+let a = x;
+console.log(a);
