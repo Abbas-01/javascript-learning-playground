@@ -1,9 +1,13 @@
 
-function compare(val) {
-    if (val !== 10) {
-        return 'True'
+function check() {
+    let a = 10;
+    let b = 15;
+    
+    if (a > b)  {
+    return "True" 
     } else {
-        return 'False'
+    return "False"
     }
-}
-console.log(compare(10)); // Returns True   
+    
+    }
+    console.log(check()); // Returns "False"
