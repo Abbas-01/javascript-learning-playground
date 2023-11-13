@@ -1,9 +1,9 @@
 
 function compare(val) {
-    if (val === '2') {
+    if (val != '20') {
         return 'True'
     } else {
         return 'False'
     }
 }
-console.log(compare(2)); // Returns False   
+console.log(compare(20)); // Returns False   
