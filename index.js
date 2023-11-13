@@ -1,8 +1,9 @@
-function check(val) {
-    if (val === '3') {
+
+function compare(val) {
+    if (val === '2') {
         return 'True'
     } else {
-        return "False"
+        return 'False'
     }
 }
-console.log(check(3));
+console.log(compare(2)); // Returns False   
