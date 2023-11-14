@@ -10,10 +10,10 @@ function hello(val) {
     } else if (typeof val === "string" && val.length < 7) {
         console.log("There are less than seven letters in this word");
     } else if (typeof val === "string" && val.length > 7) {
-        console.log("There are more than seven letters in this word");
+        console.log("There are more than seven letters/characters in this word");
     } else {
         console.log("Letters are only Characters")
     }
 }
 
-hello(1);
+hello("This is ball");
