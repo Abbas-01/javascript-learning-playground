@@ -1,19 +1,21 @@
-function hello(val) {   
-    if (typeof val === "string" && val.length <  3) {
-        console.log("There are less than three letters in this word");
-    } else if (typeof val === "string" && val.length < 4) {
-        console.log("There are less than four letters in this word");
-    } else if (typeof val === "string" && val.length < 5) {
-        console.log("There are less than five letters in this word");
-    } else if (typeof val === "string" && val.length < 6) {
-        console.log("There are less than six letters in this word");
-    } else if (typeof val === "string" && val.length < 7) {
-        console.log("There are less than seven letters in this word");
-    } else if (typeof val === "string" && val.length > 7) {
-        console.log("There are more than seven letters/characters in this word");
-    } else {
-        console.log("Letters are only Characters")
-    }
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home"];
+
+function titlesForGolfPlayer (par, strokes) {
+    if (strokes === 1) {
+        return names[0];
+    } else if (strokes <= 3) {
+        return names[1];
+    } else if (strokes === par - 1) {
+        return names[2];
+    } else if (strokes === par) {
+        return names[3];
+    } else if (strokes === par + 1) {
+        return names[4];
+    } else if (strokes === par + 2) {
+        return names[5];
+    } else if (strokes > par + 3) {
+        return names[6];
+    } 
 }
 
-hello("This is ball");
+console.log(titlesForGolfPlayer(5, 4));
