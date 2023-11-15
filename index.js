@@ -1,23 +1,37 @@
-function hello(par) {
-    let x = par;
-    switch (x) {
-        case 1 :
-            console.log("Alpha");
-        break;
-        case 2 :
-            console.log("Beta");
-        break;
-        case 3 :
-            console.log("Gamma");
-        break;
-        case 4 :
-            console.log("Delta");
-        break;
-        default :
-        console.log("Only initial four numbers are valid");
-        break;
-    }
+function hello(pra) {
+let x;
+switch (pra) {
+    case 1 :
+       x = "Low";
+    break;
+    case 2 :
+       x = "Low";
+    break;
+    case 3 :
+       x = "Low";
+    break;
+    case 4 :
+       x = "Medium";
+    break;
+    case 5 :
+       x = "Medium";
+    break;
+    case 6 :
+       x = "Medium";
+    break;
+    case 7 :
+       x = "High";
+    break;
+    case 8 :
+       x = "High";
+    break;
+    case 9 :
+       x = "High";
+    break;
+    default :
+       x = "Out of the Limit";
+    break;
 }
-hello(3);
-
-
+return x;
+}
+console.log(hello(5));
