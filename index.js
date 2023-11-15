@@ -1,20 +1,16 @@
-function hello(val) {
-    switch (val) {
-        case 1 : 
+function hello(par) {
+    let x = par;
+    if (x === 1) {
         console.log("Alpha");
-        break;
-        case 2 :
-            console.log("Beta");
-        break;
-        case 3 :
-            console.log("Gamma");
-        break;
-        case 4 :
-            console.log("Delta");
-        break;
-        default :
-        console.log("Error!");
-        break;
+    } else if (x === 2) {
+        console.log("Beta");
+    } else if (x === 3) {
+        console.log("Gamma");
+    } else if (x === 4) {
+        console.log("Delta");
+    } else {
+        console.log("Only intial four numbers");
     }
 }
-hello(1)
+
+hello(3);
