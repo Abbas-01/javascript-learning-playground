@@ -1,21 +1,15 @@
-function helo(val) {
-    let x = "";
 
-    switch (val) {
-        case "a" :
-            x = "One";
-        break;
-        case "b" :
-            x = "Two";
-        break;
-        case "c" :
-            x = "Three";
-        break;
-        case "d" :
-            x = "Four";
-        break;
+function helo(val) {
+
+    let obj = {
+        "a" : "One",
+        "b" : "Two",
+        "c" : "Three",
+        "d" : "Four"
     }
+
+    let x = obj[val];
 
     return x;
 }
-console.log(helo("a")); // Output : "One"
+console.log(helo("d")); // Output : "Four"
