@@ -1,6 +1,15 @@
-let count = 0;
+/* 
+It's too a counting card but in this one you have to explicitly call the function and assign the value of your card.
 
-function helo(card) {
+What changes we have done?
+
+In this we are not giving a parameter to the function instead we are creating a variable outside of the function, if we create this variable inside the function then we are not able to access or modify the value of the variable outside of the function because the variable will be in the block scope.
+*/
+
+
+let count = 0;
+// let card;
+function helo() {
 
     switch (card) {
         case 2 :
@@ -28,6 +37,9 @@ function helo(card) {
 
     return count + " " + betGuide;
 }
- helo(2);
- helo(8);
- console.log(helo("K"));
+let card = 5;
+helo();
+ card = 2;
+helo();
+ card = "K";
+ console.log(helo());
