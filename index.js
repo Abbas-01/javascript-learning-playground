@@ -1,8 +1,21 @@
-let person = {
-    name: "Abbas",
-    "s/o": "Ashiq",
-    age: 16
-}
+function helo(val) {
+    let x = "";
 
-console.log(person["s/o"]);
-console.log(person.age);
+    switch (val) {
+        case "a" :
+            x = "One";
+        break;
+        case "b" :
+            x = "Two";
+        break;
+        case "c" :
+            x = "Three";
+        break;
+        case "d" :
+            x = "Four";
+        break;
+    }
+
+    return x;
+}
+console.log(helo("a")); // Output : "One"
