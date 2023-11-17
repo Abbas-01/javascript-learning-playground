@@ -1,15 +1,7 @@
-
-function helo(val) {
-
-    let obj = {
-        "a" : "One",
-        "b" : "Two",
-        "c" : "Three",
-        "d" : "Four"
-    }
-
-    let x = obj[val];
-
-    return x;
+let person = {
+    "name": "Abbas",
+    "age": 16,
+    "language": "JavaScript"
 }
-console.log(helo("d")); // Output : "Four"
+
+console.log(person.hasOwnProperty("name"));
