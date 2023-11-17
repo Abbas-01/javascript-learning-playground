@@ -4,4 +4,11 @@ let person = {
     "language": "JavaScript"
 }
 
-console.log(person.hasOwnProperty("name"));
+function hasProperty(prop) {
+    if(person.hasOwnProperty(prop)) {
+        return person[prop]
+    } else {
+        return "Declare Age property"
+    }
+}
+console.log(hasProperty("language"))
