@@ -1,3 +1,19 @@
+/* 
+What have we learn from this :
+
+When we use bracket notaion to access an property if the property is not an special character or number then we have to use strings to access or modify that property. 
+
+Example:
+
+const person = {
+    name: "Abbas",
+    age : 16
+}
+person["name"]; Correct
+person[name]; Wrong
+
+*/
+
 const recordCollection = {
     2548: {
       albumTitle: 'Slippery When Wet',
