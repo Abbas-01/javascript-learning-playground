@@ -26,7 +26,9 @@ var collectionCopy = JSON.parse(JSON.stringify(recordCollection));
     } else if (prop === "tracks") {
         recordCollection[id][prop] = recordCollection[id][prop] || [] ;
          recordCollection[id][prop].push(value);
-    } 
+    } else {
+        recordCollection[id][prop] = value;
+    }
     return recordCollection;
 }
 
