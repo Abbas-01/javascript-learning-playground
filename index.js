@@ -1,8 +1,7 @@
 let helloArr = [];
-let i = 0;
-while (i <= 4) {
+
+for (let i = 0; i < 4; i++) {
   helloArr.push(i);
-  console.log(i);
-  i++;
 }
+
 console.log(helloArr)
