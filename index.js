@@ -1,13 +1,6 @@
-let revOddArr = [];
-
-for (let i = 9; i >= 1; i -= 2) {
-  revOddArr.push(i);
+let arr = [1, 2, 3, 4, 5];
+let zero = "0";
+for (i = 0; i < arr.length; i++) {
+  arr[i] = zero + arr[i];
 }
-console.log(`Odd : ${revOddArr}`);
-
-let revEveArr = [];
-for (let i = 8; i >= 0; i -= 2) {
-  revEveArr.push(i);
-}
-
-console.log(`Even : ${revEveArr}`);
+console.log(arr)
