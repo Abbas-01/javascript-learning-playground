@@ -1,12 +1,13 @@
-let myArr = [[1, 5], [2,6], [3, 7], [4, 8]];
-function productArr() {
-  let product = 1;
-for (let i = 0; i < myArr.length; i++) {
-  for (let j = 0; j < myArr[i].length; j++) {
-    product *= myArr[i][j];
-  }
-}
-return product;
-}
+let i = 2;
 
-console.log(productArr())
+// do..while loop
+do {
+    console.log(i);
+    i--;
+}while (i > 5) //Output : 2
+
+// while 
+while (i > 5) {
+  console.log(i);
+    i--;
+} // Output : nothing
