@@ -1,12 +1,13 @@
-let evenArr = [];
+let revOddArr = [];
 
-for (let i = 0; i <= 10; i+= 2) {
-  evenArr.push(i);
+for (let i = 9; i >= 1; i -= 2) {
+  revOddArr.push(i);
 }
-console.log(evenArr);
+console.log(`Odd : ${revOddArr}`);
 
-let oddArr = [];
-for (let i = 1; i < 10; i+= 2) {
-  oddArr.push(i)
+let revEveArr = [];
+for (let i = 8; i >= 0; i -= 2) {
+  revEveArr.push(i);
 }
-console.log(oddArr);
+
+console.log(`Even : ${revEveArr}`);
