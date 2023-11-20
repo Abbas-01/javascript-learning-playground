@@ -1,10 +1,9 @@
-/* jo array parameter hai wo aur x variable dono ka aik hi reference tha memory ma to phr hamna array parameter ko jab equal/assignment operator lga kr alag sa aik value assign ki to isna aik new location create kr li memory ma  */
+let x = [1, 5];
 
-let x =  [1, 2];
-console.log(x); // Returns [1, 2]
-add(x, 4);
-console.log(x); // Returns [1, 2]
-function add(array, element) {
-    array = [element]
-    console.log(array); // Returns [4]
-};
+let y = x;
+
+let w = [1, 5];
+console.log(`${x === y}`); // Returns True
+console.log(`${x == y}`); // Returns True
+console.log(`${x === w}`); // Returns False
+console.log(`${x == w}`); // Returns False
