@@ -1,4 +1,11 @@
-const x =3;
+let x = [1, 2, 3];
+console.log(x);
+
+let y = x;
+y.push(5);
 console.log(x)
-x = 1;
+console.log(y);
+
+y = [5, 6, 7]
+console.log(y);
 console.log(x)
