@@ -1,7 +1,12 @@
-function helo(number) {
-    let x = number < 5 ? "Less than five" : number > 5 ? "Greater than five" : "Equal to five";
-    return x;
-}
-console.log(helo(3));
-console.log(helo(5));
-console.log(helo(10));
+// Using var Keyword
+var hello = 2;
+var hello = 5;
+console.log(hello); // Returns 5
+console.log(hello); // Returns 5
+
+// Using let Keyword
+let hello = 2;
+let hello = 5;
+console.log(hello); // Returns Error
+console.log(hello); // Returns Error
+
