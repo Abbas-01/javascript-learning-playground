@@ -1,9 +1,19 @@
-let x = [1, 5];
+const obj = {
+    name : "Ababs",
+    age: 16
+}
 
-let y = x;
+obj.name = "Ali"
+console.log(obj); // Returns {name: 'Ali', age: 16}
 
-let w = [1, 5];
-console.log(`${x === y}`); // Returns True
-console.log(`${x == y}`); // Returns True
-console.log(`${x === w}`); // Returns False
-console.log(`${x == w}`); // Returns False
+obj = {
+    userName: "Abbas-01",
+    pass: 786
+}
+
+const arr = ["Abbas", 16];
+
+arr.unshift("Ali");
+console.log(arr); // Returns ['Ali', 16] 
+
+arr = ["Abbas-01", 786];
