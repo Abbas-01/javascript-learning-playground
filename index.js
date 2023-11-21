@@ -1,21 +1,17 @@
-const person = {
-    name: 'John',
-    age: 30
+const nestedObject = {
+    prop: 'value'
   };
   
-  // Freeze the 'person' object
-  Object.freeze(person);
+  // Freeze the nestedObject
+  const frozenNestedObject = Object.freeze(nestedObject);
   
-  // Attempting to modify the object will have no effect
-  person.name = 'Jane';
-  person.job = 'Developer'; // This property won't be added
+  const obj = {
+    frozenProp: frozenNestedObject
+  };
   
-  console.log(person); 
-  // Output: { name: 'John', age: 30 }
+  // Attempting to modify the nested object will NOT work
+  obj.frozenProp.prop = 'new value'; // This will NOT work
   
-  // Attempting to delete a property will have no effect
-  delete person.age;
-  
-  console.log(person); 
-  // Output: { name: 'John', age: 30 }
+  console.log(obj.frozenProp);
+  // Output: { prop: 'value' }
   
