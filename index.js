@@ -1,17 +1,12 @@
-const nestedObject = {
-    prop: 'value'
-  };
-  
-  // Freeze the nestedObject
-  const frozenNestedObject = Object.freeze(nestedObject);
-  
-  const obj = {
-    frozenProp: frozenNestedObject
-  };
-  
-  // Attempting to modify the nested object will NOT work
-  obj.frozenProp.prop = 'new value'; // This will NOT work
-  
-  console.log(obj.frozenProp);
-  // Output: { prop: 'value' }
-  
+const arrCheck = (array) => {
+    function helo(minRan, maxRan, value) {
+        for (let i = minRan; i <= maxRan; i++) {
+            if (array[i] === value) {
+                return true
+            }
+        }
+        return false;
+    }
+    return helo(1, 4, 2);
+}
+console.log(arrCheck([7, 1, 8, 3, 6, 2]));
