@@ -1,7 +1,8 @@
-function helo(...x) {
-    x.forEach(a => {
-        let b = a + 2;
-        console.log(b);
+function helo(a, b, ...x) {
+    let z = a + b;
+    x.forEach(num => {
+        z += num
     })
+    console.log(z);
 }
-helo(2, 5, 10);
+helo(3, 8, 5, 7, 11);
