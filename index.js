@@ -1,13 +1,7 @@
-let arr = [];
-
-function helo() {
-    for (let i = 0; i < 6; i++) {
-        arr.push([]);
-        let number = 35 - i * 6; 
-        for (let j = 0; j < 3; j++) {
-            arr[i].push(number - j * 2);
-        }
-    }
+function helo(...x) {
+    x.forEach(a => {
+        let b = a + 2;
+        console.log(b);
+    })
 }
-helo();
-console.log(arr)
+helo(2, 5, 10);
