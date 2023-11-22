@@ -1,12 +1,13 @@
-const arrCheck = (array) => {
-    function helo(minRan, maxRan, value) {
-        for (let i = minRan; i <= maxRan; i++) {
-            if (array[i] === value) {
-                return true
-            }
+let arr = [];
+
+function helo() {
+    for (let i = 0; i < 6; i++) {
+        arr.push([]);
+        let number = 35 - i * 6; 
+        for (let j = 0; j < 3; j++) {
+            arr[i].push(number - j * 2);
         }
-        return false;
     }
-    return helo(1, 4, 2);
 }
-console.log(arrCheck([7, 1, 8, 3, 6, 2]));
+helo();
+console.log(arr)
