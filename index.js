@@ -3,8 +3,8 @@ let x = {
     age: 16
 };
 let y = {
-    name: "Asad",
-    age: 16
+  father: "Ashiq",
+  Death: 2008
 };
-let z = {...x, father: "Ashiq"};
+let z = {...x, ...y};
 console.log(z);
