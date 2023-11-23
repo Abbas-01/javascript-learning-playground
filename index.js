@@ -1,4 +1,10 @@
-let x = [1, 2, 3];
-let y = [4, 5];
-let z = [...y, 6, 7];
+let x = {
+    name: "Abbas",
+    age: 16
+};
+let y = {
+    name: "Asad",
+    age: 16
+};
+let z = {...x, father: "Ashiq"};
 console.log(z);
