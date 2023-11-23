@@ -1,8 +1,7 @@
-const x = (first, last, ...arg) => {
+const x = (first, last, arg) => {
     let fullName = first + " " + last;
-    arg.forEach(element => {
-        console.log(element);
-    })
-    return fullName;
+    // let modArrr = arg.map(x => "Hello " + x);
+    let hello = arg.pop();
+    return [fullName, hello] 
 }
-console.log(x("Asad", "Chang", "Matric", "Matli"));
+console.log(x("Asad", "Chang", ["Matric", "Matli"]));
