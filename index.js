@@ -1,8 +1,8 @@
-function helo(a, b, ...x) {
-    let z = a + b;
-    x.forEach(num => {
-        z += num
+const x = (first, last, ...arg) => {
+    let fullName = first + " " + last;
+    arg.forEach(element => {
+        console.log(element);
     })
-    console.log(z);
+    return fullName;
 }
-helo(3, 8, 5, 7, 11);
+console.log(x("Asad", "Chang", "Matric", "Matli"));
