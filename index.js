@@ -1,9 +1,7 @@
-const AVG_Tempearture = {
-    today: 54.2,
-    tomorrow: 21.7
-}
-const helo = (temperature) => {
-    const {today : todayTemp, tomorrow : tomoTemp} = temperature;
-    return tomoTemp;
-}
-console.log(helo(AVG_Tempearture));
+let yourArr = [1, 2, 3, [8, 9], [10, 5]];
+
+let [one, two, three, [eight, nine], [ten, five] ] = yourArr;
+console.log(ten)
+console.log(five)
+console.log(eight)
+console.log(one)
