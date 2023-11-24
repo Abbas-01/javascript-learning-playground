@@ -1,7 +1,9 @@
-let yourArr = [1, 2, 3, [8, 9], [10, 5]];
+let a = "Abbas";
+let b = "Asad";
 
-let [one, two, three, [eight, nine], [ten, five] ] = yourArr;
-console.log(ten)
-console.log(five)
-console.log(eight)
-console.log(one)
+console.log(a);
+console.log(b);
+
+ [a, b] = [b, a];
+ console.log(a);
+ console.log(b);
