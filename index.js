@@ -1,22 +1,15 @@
-let arr = {
-    a : ["One", "Two", "Three"],
-    b : [1, 2, 3],
-    c : ["I", "II", "III"]
-};
-
-function myArr(x) {
-    let z = [];
-    let numIden;
-    if (x === arr.a) {
-        numIden = "Cardinal"
-    } else if (x === arr.b) {
-        numIden = "Natural"
-    } else if (x === arr.c) {
-        numIden = "Roman"
+function info(name, age, grade, school) {
+    return {
+        name: name,
+        age: age,
+        grade: grade,
+        school: school
     }
-    for (let i = 0; i < x.length; i++) {
-    z.push(`This is ${x[i]} ${numIden} Number`);
-    }
-    return z;
 }
-console.log(myArr(arr.a));
+
+const abbas = info("Abbas", 15, "Matric", "AIMS"); 
+const asad = info("Asad", 16, "Matric", "AIMS"); 
+const farzain = info("Farzain", 16, "Matric", "The Smart School"); 
+console.log(abbas);
+console.log(asad);
+console.log(farzain);
