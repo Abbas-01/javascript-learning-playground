@@ -1,11 +1,15 @@
-const celFahConverter = (temp, unit) => {
-    const celToFah = temp * (9/5) + 32;
-    const fahToCel =(temp - 32) * 5/9;
-    if (unit === "c") {
-        return celToFah;
-    } else if (unit === "f") {
-        return fahToCel;
+const arrAnalysis = (arr) => {
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+    let totalNum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        totalNum += arr[i];
     }
-}
+    let average = totalNum / arr.length;
+    return {max, min, average};
+};
 
-console.log(celFahConverter(10, "f"))
+console.log(arrAnalysis([1, 2, 5, 6]));
+console.log(arrAnalysis([10, 2, 5, 6]));
+
+
