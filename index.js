@@ -1,13 +1,15 @@
-// const largerNumber = (numOne, numTwo) => {
-//     if (numOne > numTwo) {
-//         return numOne;
-//     } else if (numOne < numTwo) {
-//         return numTwo;
-//     }
-// }
-// console.log(largerNumber(5, 20));
-
-const largerNumber = (numOne, numTwo) => {
-    return (numOne > numTwo) ? "numOne " + numOne : (numOne < numTwo) ? "numTwo " + numTwo : "Numbers are only valid characters" 
-} 
-console.log(largerNumber(1000, 10))
+const isVowel = (alpha) => {
+    let vowels = ["a", "e", "i", "o", "u"];
+    for (let i = 0; i < vowels.length; i++) {
+        if (vowels[i] === alpha) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(isVowel("q"));
+console.log(isVowel("e"));
+console.log(isVowel("z"));
+console.log(isVowel("a"));
+console.log(isVowel("y"));
+console.log(isVowel("x"));
