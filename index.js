@@ -1,15 +1,15 @@
-const arrAnalysis = (arr) => {
-    let max = Math.max(...arr);
-    let min = Math.min(...arr);
-    let totalNum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        totalNum += arr[i];
+const loginSystem = (userName, pass) => {
+    if (userName === "user" && pass === "password") {
+        return "You have logged in Successfully !"
+    } else if (userName !== "user" && pass !== "password") {
+            return Error("Both UserName and Password are incorrect Try Again!");
+    } else if (userName !== "user") {
+            return Error(" UserName is incorrect Try Again!");
+    } else if ( pass !== "password") {
+            return Error("Password is incorrect Try Again!");
     }
-    let average = totalNum / arr.length;
-    return {max, min, average};
-};
-
-console.log(arrAnalysis([1, 2, 5, 6]));
-console.log(arrAnalysis([10, 2, 5, 6]));
-
-
+    }
+console.log(loginSystem("user", "password"));
+console.log(loginSystem("uer", "assword"));
+console.log(loginSystem("use", "password"));
+console.log(loginSystem("user", "passwor"));
