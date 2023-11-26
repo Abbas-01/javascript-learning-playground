@@ -1,16 +1,13 @@
-// function helo(num) {
-//     return function () {
-//         return num++;
-//     }
-// }
-// let counterFunc = helo(5);
-// console.log(counterFunc())
-// console.log(counterFunc())
-// console.log(counterFunc())
-// console.log(counterFunc())
-// console.log(counterFunc())
-// console.log(counterFunc())
+class person {
+    constructor(fName, lName, age) {
+        this.firstName = fName;
+        this.lastName = lName;
+        this.age = age;
+    }
+    fullName () {
+        return `${this.firstName} ${this.lastName}`
+    }
+}
 
-let a = 1;
-console.log(a); 
-console.log(++a);
+let abbas = new person("Abbas", "Ali", 15);
+console.log(abbas.fullName())
