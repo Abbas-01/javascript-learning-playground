@@ -1,10 +1,10 @@
-const sumArr = (arr) => {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
+const revArr = (arr) => {
+    let x = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        x.push(arr[i]);
     }
-    return sum;
+    return x;
 }
 
-let x = [2, 4, 51, 9];
-console.log(sumArr(x))
+let x = ["Abbas", "Ali", "Asad"];
+console.log(revArr(x))
