@@ -1,15 +1,10 @@
-const loginSystem = (userName, pass) => {
-    if (userName === "user" && pass === "password") {
-        return "You have logged in Successfully !"
-    } else if (userName !== "user" && pass !== "password") {
-            return Error("Both UserName and Password are incorrect Try Again!");
-    } else if (userName !== "user") {
-            return Error(" UserName is incorrect Try Again!");
-    } else if ( pass !== "password") {
-            return Error("Password is incorrect Try Again!");
+const sumArr = (arr) => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
-    }
-console.log(loginSystem("user", "password"));
-console.log(loginSystem("uer", "assword"));
-console.log(loginSystem("use", "password"));
-console.log(loginSystem("user", "passwor"));
+    return sum;
+}
+
+let x = [2, 4, 51, 9];
+console.log(sumArr(x))
