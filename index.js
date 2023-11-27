@@ -1,10 +1,10 @@
-const revArr = (arr) => {
-    let x = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        x.push(arr[i]);
-    }
-    return x;
+const findMinMax = (arr) => {
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+
+    return [max, min]
+
 }
 
-let x = ["Abbas", "Ali", "Asad"];
-console.log(revArr(x))
+let x = [5, 100, 10000, 34, 0];
+console.log(findMinMax(x));
