@@ -1,12 +1,7 @@
-const avergeArr = (arr) => {
-    let sumOfElements = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sumOfElements += arr[i];
-    }
-    let elementsAverage = sumOfElements/arr.length;
+let xa = ["Abbas", "Ali"]
+const mySet = new Set(xa);
 
-    return elementsAverage;
-}
 
-let x = [1, 2, 3, 4, 5];
-console.log(avergeArr(x));
+console.log(mySet);
+
+
