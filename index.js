@@ -1,27 +1,20 @@
-const isPalindromeArray = (arr) => {
-    let left = 0;
-    let right = arr.length - 1;
+const chunkedArray = (arr, chunkSize) => {
+    let chunckArr = [];
+    let chunkedArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        chunckArr.push(arr[i]);  
 
-    while (left <= right) {
-    if (arr[left] === arr[right]) {
-        left++;
-        right--;
-    } else {
-        return false;
-    } 
+        if (chunckArr.length === chunkSize || i === arr.length - 1) {
+            chunkedArr.push([...chunckArr]);
+            chunckArr = [];
+        }
+    }
+    return chunkedArr;
 }
 
-return true;
-
-};
-
-let x = [1, 2, 3, 2, 1];
-let y = [1, 2, 3, 4, 5];
-
-let a = isPalindromeArray(x);
+let x = ["Abbas", "Ali", "Asad", "adas", "dfdfg", "dfaf", "asdfhasufs"];
+let a = chunkedArray(x, 3);
+let y = [1, 2, 3, 4, 5, 6, 7];
+let b = chunkedArray(y, 4);
 console.log(a);
-
-let b = isPalindromeArray(y);
 console.log(b);
-
-
