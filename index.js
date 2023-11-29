@@ -1,16 +1,11 @@
-const findIndex = (arr, element) => {
-    for (let i = 0; i < arr.length; i++) {
-        
-        if (arr[i] === element) {
-            return i;   
-        }
-    }
-    
-    return -1;
+const concatArrays = (arrOne, arrTwo) => {
+    let a = [...arrOne, ...arrTwo];
+    return a; 
 };
 
 let x = ["Abbas", "Ali", "Farzain", "Ghazanfer"];
+let y = ["Asad", "Axlan"];
+let a = concatArrays(x, y);
 
-let a = findIndex(x, "arzain");
 console.log(a);
 
