@@ -1,11 +1,10 @@
-const remDuplicate = (arr) => {
-    let nonDuplicate = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (!arr.includes(arr[i], i + 1)) {
-            nonDuplicate.push(arr[i]);
-        }
-    }
-    return nonDuplicate;
-}
-let a = [1, 2, 5, 2, 1, 34, 51]
-console.log(remDuplicate(a));
+const rotateArrLeft = (arr, steps) => {
+    steps = steps % arr.length;
+    const lastElements = arr.slice(steps - arr.length);
+    const rotatedArr = lastElements.concat(arr.slice(0, steps));
+    return rotatedArr;
+};
+
+let x = [1, 2, 3, 4, 5, 6];
+console.log(rotateArrLeft(x, 10));
+
