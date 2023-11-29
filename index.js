@@ -1,11 +1,27 @@
-const concatArrays = (arrOne, arrTwo) => {
-    let a = [...arrOne, ...arrTwo];
-    return a; 
+const isPalindromeArray = (arr) => {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+    if (arr[left] === arr[right]) {
+        left++;
+        right--;
+    } else {
+        return false;
+    } 
+}
+
+return true;
+
 };
 
-let x = ["Abbas", "Ali", "Farzain", "Ghazanfer"];
-let y = ["Asad", "Axlan"];
-let a = concatArrays(x, y);
+let x = [1, 2, 3, 2, 1];
+let y = [1, 2, 3, 4, 5];
 
+let a = isPalindromeArray(x);
 console.log(a);
+
+let b = isPalindromeArray(y);
+console.log(b);
+
 
