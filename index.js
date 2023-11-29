@@ -1,9 +1,13 @@
-const rotateArrLeft = (arr, steps) => {
-    steps = steps % arr.length;
-    const rotatedArr = arr.slice(steps).concat(arr.slice(0, steps));
-    return rotatedArr;
+const countElements = (arr) => {
+    let obj = {};
+    for (let i = 0; i < arr.length; i++) {
+        obj[i + 1] = arr[i];
+    }
+    return obj
 };
 
-let x = [1, 2, 3, 4, 5, 6];
-console.log(rotateArrLeft(x, 4));
+let x = ["Abbas", "Ali", "Farzain", "Ghazanfer"];
+
+let a = countElements(x);
+console.log(a);
 
