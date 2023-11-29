@@ -1,20 +1,16 @@
 const findIndex = (arr, element) => {
-    let index;
     for (let i = 0; i < arr.length; i++) {
         
         if (arr[i] === element) {
-            index = i;   
+            return i;   
         }
     }
-    if (typeof index === "undefined") {
-        index = -1;
-    }
     
-    return index
+    return -1;
 };
 
 let x = ["Abbas", "Ali", "Farzain", "Ghazanfer"];
 
-let a = findIndex(x, "Farzain");
+let a = findIndex(x, "arzain");
 console.log(a);
 
