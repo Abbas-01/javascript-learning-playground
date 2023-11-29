@@ -1,13 +1,20 @@
-const countElements = (arr) => {
-    let obj = {};
+const findIndex = (arr, element) => {
+    let index;
     for (let i = 0; i < arr.length; i++) {
-        obj[i + 1] = arr[i];
+        
+        if (arr[i] === element) {
+            index = i;   
+        }
     }
-    return obj
+    if (typeof index === "undefined") {
+        index = -1;
+    }
+    
+    return index
 };
 
 let x = ["Abbas", "Ali", "Farzain", "Ghazanfer"];
 
-let a = countElements(x);
+let a = findIndex(x, "Farzain");
 console.log(a);
 
