@@ -1,8 +1,18 @@
-const outerFunc = (a) => {
-    const innerFunc = (b) => {
-        return a * b;
-    }
-    return innerFunc;
+function outer() {
+  let outerVar = 'I am from the outer function';
+
+  function inner() {
+      // Your code here: Access outerVar and log it
+      return outerVar;
+  }
+
+  // Your code here: Return the inner function
+  return inner;
 }
-let x = outerFunc(2);
-console.log(x(4));
+
+// Create a closure by assigning the inner function to a variable
+let closure = outer();
+
+// Call the closure to log the outer variable
+console.log(closure())
+// Expected Output: I am from the outer function
