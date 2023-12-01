@@ -1,10 +1,8 @@
-const outerFunc = () => {
-    let a = "Abbas";
-    const innerFunc = () => {
-        let b = "Ali";
-        console.log(`${b} and ${a}`);
+const outerFunc = (a) => {
+    const innerFunc = (b) => {
+        return a * b;
     }
-    // console.log(`${a} and ${b}`);
-    innerFunc();
+    return innerFunc;
 }
-outerFunc();
+let x = outerFunc(2);
+console.log(x(4));
