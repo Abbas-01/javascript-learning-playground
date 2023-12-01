@@ -1,8 +1,10 @@
 const outerFunc = () => {
-    console.log("Outer");
+    let a = "Abbas";
     const innerFunc = () => {
-        console.log("Inner");
+        let b = "Ali";
+        console.log(`${b} and ${a}`);
     }
-    innerFunc()
+    // console.log(`${a} and ${b}`);
+    innerFunc();
 }
 outerFunc();
