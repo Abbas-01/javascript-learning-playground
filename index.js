@@ -1,18 +1,26 @@
-function outer() {
-  let outerVar = 'I am from the outer function';
+// Create a function that returns a counter function
+function createCounter() {
+  let count = 0;
 
-  function inner() {
-      // Your code here: Access outerVar and log it
-      return outerVar;
+  // Your code here: Return a function that increments and returns the count
+  function countIncrement () {
+    count++;
+    return count;
   }
-
-  // Your code here: Return the inner function
-  return inner;
+  return countIncrement;
 }
 
-// Create a closure by assigning the inner function to a variable
-let closure = outer();
+// Create two counters using the createCounter function
+let counter1 = createCounter();
+let counter2 = createCounter();
 
-// Call the closure to log the outer variable
-console.log(closure())
-// Expected Output: I am from the outer function
+// Use the counters to increment and log values
+console.log(counter1())
+console.log(counter1())
+console.log(counter2())
+console.log(counter2())
+// Expected Output:
+// 1
+// 2
+// 1
+// 2
