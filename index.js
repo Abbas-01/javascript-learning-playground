@@ -1,7 +1,9 @@
-
-const helo = (callBack) => {
-  callBack()
+const greet = (name = "Stranger") => {
+  return `Hello! ${name}`
 }
-helo(function () {
-  console.log("This function is callback function")
-});
+const helo = (callBack, person) => {
+  return callBack(person);
+}
+// console.log(helo(greet, "Abbas"));
+console.log(helo(greet, "Abbas"))
+
