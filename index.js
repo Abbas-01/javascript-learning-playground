@@ -1,15 +1,17 @@
-function customMap(arr, callback) {
+function customFilter(arr, callback) {
   // Your code here
   let x = [];
   for (let i = 0; i < arr.length; i++) {
-    x.push(callback(arr[i]));
-  }
-  return x;
+    if (callback(arr[i])) {
+      x.push(arr[i]);
+    }
+}
+return x;
 }
 
 // Example usage:
 let numbers = [1, 2, 3, 4, 5];
-let squaredNumbers = customMap(numbers, function(num) {
-  return num * num;
+let evenNumbers = customFilter(numbers, function(num) {
+  return num % 2 === 0;
 });
-console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+console.log(evenNumbers); // Output: [2, 4]
