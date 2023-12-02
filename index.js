@@ -1,16 +1,10 @@
-function executeIf(condition, ifTrue, ifFalse) {
+function delayedExecution(callback, delay) {
   // Your code here
-  if (condition) {
-    ifTrue();
-  } else {
-    ifFalse();
-  }
+  setTimeout(callback, delay);
 }
 
 // Example usage:
-executeIf(false, function() {
-  console.log("It's true!");
-}, function() {
-  console.log("It's false!");
-});
-// Output: It's true!
+delayedExecution(function() {
+  console.log("Delayed execution after 2000 milliseconds");
+}, 2000);
+// Output: (after 2 seconds) Delayed execution after 2000 milliseconds
