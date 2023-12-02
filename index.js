@@ -1,9 +1,11 @@
-const pureFunc = (num) => {
-  return num + num;
+let a = "Abbas";
+const impureFunc = (lastName) => {
+  a = a + " " + lastName; 
 }
-console.log(pureFunc(2));
+impureFunc("Ali");
+console.log(a);
 
-const pureFuncTwo = (string) => {
-  return string.toUpperCase();
+const impureFuncTwo = (maxNumber) => {
+  return Math.random() * maxNumber;
 }
-console.log(pureFuncTwo("Hello"))
+console.log(impureFuncTwo(5));
