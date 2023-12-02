@@ -1,17 +1,15 @@
-function customFilter(arr, callback) {
+function sumOfSquares(arr, squareCallback) {
   // Your code here
-  let x = [];
+  let sumOfSquares = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (callback(arr[i])) {
-      x.push(arr[i]);
-    }
-}
-return x;
+   sumOfSquares += squareCallback(arr[i]);
+  }
+  return sumOfSquares;
 }
 
 // Example usage:
 let numbers = [1, 2, 3, 4, 5];
-let evenNumbers = customFilter(numbers, function(num) {
-  return num % 2 === 0;
+let result = sumOfSquares(numbers, function(num) {
+  return num * num;
 });
-console.log(evenNumbers); // Output: [2, 4]
+console.log(result); // Output: 55 (1^2 + 2^2 + 3^2 + 4^2 + 5^2)
