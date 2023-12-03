@@ -1,8 +1,12 @@
-const sumOfDigits = (num) => {
-    if (num < 10) {
-        return num;
-    } else {
-        return num % 10 + sumOfDigits(Math.floor(num / 10));
+const isPalindrome = (string) => {
+    if (string.length <= 1) {
+        return true;
     }
-};
-console.log(sumOfDigits(123));
+    if (string[0] === string[string.length -1]) {
+        return isPalindrome(string.slice(1, -1));
+    } else {
+        return false;
+    }
+}
+
+console.log(isPalindrome([1, 2, 5, 2, 1]));
