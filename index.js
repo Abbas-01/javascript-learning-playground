@@ -1,9 +1,8 @@
-function factorialFunc (num) {
-    if (num === 0) {
-        return 1;
+const sumOfDigits = (num) => {
+    if (num < 10) {
+        return num;
+    } else {
+        return num % 10 + sumOfDigits(Math.floor(num / 10));
     }
-    
-    let factorial = num * factorialFunc(num - 1);
-    return factorial
-}
-console.log(factorialFunc(5));
+};
+console.log(sumOfDigits(123));
