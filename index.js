@@ -1,11 +1,9 @@
-const recursiveFunc = (num) => {
-    if (num === 10) { // Base Condition
-        console.log(num);
-        return;
+function factorialFunc (num) {
+    if (num === 0) {
+        return 1;
     }
-
-    console.log(num);
-    recursiveFunc(num + 1); // Recursive Call
+    
+    let factorial = num * factorialFunc(num - 1);
+    return factorial
 }
-
-recursiveFunc(2);
+console.log(factorialFunc(5));
