@@ -1,8 +1,19 @@
-const power = (base, exponent) => {
-    if (exponent === 0) {
-        return 1;
-    }
-    return base * power(base, exponent - 1);
-}
+const GCD = (a, b) => {
+    if (a < b) {
+        let x = a;
+        a = b;
+        b = x;
 
-console.log(power(3, 3))
+    };
+
+    let temp;
+    while (b !== 0) {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+
+}
+console.log(GCD(16, 54));
+// console.log(36 % 16);
