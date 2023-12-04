@@ -1,12 +1,9 @@
-const isPalindrome = (string) => {
-    if (string.length <= 1) {
-        return true;
+const isPalindrome = (number) => {
+    let x = 0;
+    while (number > 10) {
+        x += number % 10;
+        number = Math.floor(number / 10);
     }
-    if (string[0] === string[string.length -1]) {
-        return isPalindrome(string.slice(1, -1));
-    } else {
-        return false;
-    }
+    return x + number;
 }
-
-console.log(isPalindrome([1, 2, 5, 2, 1]));
+console.log(isPalindrome(5511217));
