@@ -1,9 +1,8 @@
-const isPalindrome = (number) => {
-    let x = 0;
-    while (number > 10) {
-        x += number % 10;
-        number = Math.floor(number / 10);
+const power = (base, exponent) => {
+    if (exponent === 0) {
+        return 1;
     }
-    return x + number;
+    return base * power(base, exponent - 1);
 }
-console.log(isPalindrome(5511217));
+
+console.log(power(3, 3))
