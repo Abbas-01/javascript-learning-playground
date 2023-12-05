@@ -3,6 +3,8 @@ let x = [54, 11, 90, 53];
 let c = 0;
 
 x.forEach(a => {
-    c += a;
+    if (c < a) {
+        c = a;
+    }
 })
-console.log(c)
+console.log(c);
