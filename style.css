@@ -2,50 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
-body {
-    padding: 2rem;
-    height: 200vh;
-    background-color: #6b565642;
-}
-
-.aside {
-    float: right;
-    width: 30%;
-    height: 100vh;
-    background-color: rgb(196, 255, 250);
-    position: relative;
-}
-.aside p {
-    width: 80%;
-    position: sticky;
-    top: 2rem;
-    margin: 2rem auto;
-    text-align: justify;
-}
-.container { 
-    width: 60%;
-    height: 100vh;
-    padding: 2rem;
-    border-left: 3px solid #000;
-    border-right: 3px solid #000;
-    
-}
-.container h1 {
+ h1 {
     font-size: 3rem;
+    font-family: sans-serif;
     text-align: center;
-}
-.container p {
-    width: 95%;
-    text-align: justify;
-    margin: 1rem auto;
-}
-
-
-
-
-
-
-
-
+    margin-top: 20%;
+ }

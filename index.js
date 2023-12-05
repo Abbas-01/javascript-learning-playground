@@ -1,19 +1,8 @@
-const GCD = (a, b) => {
-    if (a < b) {
-        let x = a;
-        a = b;
-        b = x;
+let x = [54, 11, 90, 53];
 
-    };
+let c = 0;
 
-    let temp;
-    while (b !== 0) {
-        temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
-
-}
-console.log(GCD(16, 54));
-// console.log(36 % 16);
+x.forEach(a => {
+    c += a;
+})
+console.log(c)
