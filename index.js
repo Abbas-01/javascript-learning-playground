@@ -1,10 +1,16 @@
 let x = [7, 4, 2, 9, 4];
 
-let y = [];
-x.forEach((a, index, arr) => {
-    if (!arr.includes(a, index + 1)) {
-        y.push(a);
-    }
-})
-console.log(y);
+let sumOfElements = 0;
+let count = 0;
+x.forEach((a) => {
+    sumOfElements += a;
+    count++;
+});
+
+if (count === 0) {
+    console.log(0);
+} else {
+    console.log(Math.round(sumOfElements / count));
+}
+
 
