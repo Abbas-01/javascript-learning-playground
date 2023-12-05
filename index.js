@@ -1,7 +1,10 @@
 let x = [1, 2, 3, 4, 5];
 
-x.forEach((a, index, arr) => {
-    arr[index] = a * 2;
+let y = [];
+x.forEach((a) => {
+    if (a % 2 !== 0) {
+        y.push(a);
+    }
 })
-console.log(x)
+console.log(y);
 
