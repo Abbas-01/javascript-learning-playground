@@ -1,10 +1,7 @@
-let x = [54, 11, 90, 53];
+let x = [1, 2, 3, 4, 5];
 
-let c = 0;
-
-x.forEach(a => {
-    if (c < a) {
-        c = a;
-    }
+x.forEach((a, index, arr) => {
+    arr[index] = a * 2;
 })
-console.log(c);
+console.log(x)
+
