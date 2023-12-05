@@ -1,19 +1,10 @@
-let x = [{
-  name: "Abbas",
-  age: 15
-}, {
-    name: "Asad",
-    age: 16
-}, {
-    name: "Farzain",
-    age: 16
-}, {
-    name: "Shaheer",
-    age: 18
-}];
+let x = [7, 4, 2, 9, 4];
 
-x.forEach((a) => {
-    a.nameLength = a.name.length;
+let y = [];
+x.forEach((a, index, arr) => {
+    if (!arr.includes(a, index + 1)) {
+        y.push(a);
+    }
 })
-console.log(x);
+console.log(y);
 
