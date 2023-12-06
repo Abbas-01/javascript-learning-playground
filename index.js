@@ -1,6 +1,10 @@
-let stringsArr = ["ElementOne", "ElementTwo", "ElementThree", "ElementFour"];
+const squaredArr = (arr) => {
+    let squaredArray = arr.map(a => {
+        return a * a;
+    });
+    return squaredArray;
+};
 
-stringsArr.forEach((a, i, arr) => {
-    arr[i] = `${a} Updated`
-})
-console.log(stringsArr)
+const x = [2, 3, 4, 5, 8];
+console.log(squaredArr(x));
+
