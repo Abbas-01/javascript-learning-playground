@@ -1,10 +1,10 @@
-const convertToString = (arr) => {
-    let convertedArr = arr.map(a => {
-        return a.toString();
+const convertToUpperCase = (arr) => {
+    let uppercasedArr = arr.map(a => {
+        return a.toUpperCase();
     });
-    return convertedArr;
+    return uppercasedArr;
 };
 
-const x = [10, 23, 51, 72, 32];
-console.log(convertToString(x));
+const x = ["Abbas", "Ali", "Tanveer", "Asad"];
+console.log(convertToUpperCase(x));
 
