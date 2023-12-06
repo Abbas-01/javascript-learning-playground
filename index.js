@@ -1,10 +1,10 @@
-const convertToUpperCase = (arr) => {
-    let uppercasedArr = arr.map(a => {
-        return a.toUpperCase();
+const lengthOfArr = (arr) => {
+    let lengthArray = arr.map(a => {
+        return a.length;
     });
-    return uppercasedArr;
+    return lengthArray;
 };
 
-const x = ["Abbas", "Ali", "Tanveer", "Asad"];
-console.log(convertToUpperCase(x));
+const x = ["Abbas", "Tanveer", "Ali", "Asad", "Farzain"];
+console.log(lengthOfArr(x));
 
