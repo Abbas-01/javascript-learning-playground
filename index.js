@@ -1,10 +1,8 @@
-const extractFirstCharac = (arr) => {
-    return arr.map(a => {
-        return a[0];
+const fahrenheitToCelsius = (arr) => {
+    return arr.map((a, i, arr) => {
+        return Math.round((a - 32) * 5/9) + "°C"; 
     })
 };
 
-const x = ["Abbas", "Tanveer", "Ali", "Asad", "Farzain"];
-console.log(extractFirstCharac(x));
-
-
+const fahrenheitArr = [32, 16, 81, 43];
+console.log(fahrenheitToCelsius(fahrenheitArr));
