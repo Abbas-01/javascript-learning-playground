@@ -1,28 +1,14 @@
-const usersNameArr = (arr) => {
-    return arr.map((a, i, arr) => {
-        return a.userName;
-    })
-};
+const squareRoot = (num) => {
+    for (let i = 1; i < num; i++) {
+        if (num / i === i) {
+            return i;
+        }
+    }
+}
 
-const usersData = [{
-    userName: "Abbas-01",  
-    age: 15,
-    city: "Matli"
-}, {
-    userName: "Tanveer786",
-    age: 23,
-    city: "Matli"
-}, {
-    userName: "Aleey1",
-    age: 19,
-    city: "Matli"
-}, {
-    userName: "Asad-Ullah",
-    age: 16,
-    city: "Matli"
-}, {
-    userName: "Farzain_Ahmed",
-    age: 16,
-    city: "Matli"
-}];
-console.log(usersNameArr(usersData));
+const squareRootsArr = (arr) => {
+    return arr.map(squareRoot);
+}
+
+const x = [4, 9, 16, 25, 36, 49];
+console.log(squareRootsArr(x));
