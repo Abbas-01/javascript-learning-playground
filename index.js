@@ -1,10 +1,10 @@
-const squaredArr = (arr) => {
-    let squaredArray = arr.map(a => {
-        return a * a;
+const doubledArr = (arr) => {
+    let doubledArray = arr.map(a => {
+        return a + a;
     });
-    return squaredArray;
+    return doubledArray;
 };
 
 const x = [2, 3, 4, 5, 8];
-console.log(squaredArr(x));
+console.log(doubledArr(x));
 
