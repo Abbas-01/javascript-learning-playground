@@ -1,10 +1,10 @@
-const lengthOfArr = (arr) => {
-    let lengthArray = arr.map(a => {
-        return a.length;
-    });
-    return lengthArray;
+const extractFirstCharac = (arr) => {
+    return arr.map(a => {
+        return a[0];
+    })
 };
 
 const x = ["Abbas", "Tanveer", "Ali", "Asad", "Farzain"];
-console.log(lengthOfArr(x));
+console.log(extractFirstCharac(x));
+
 
