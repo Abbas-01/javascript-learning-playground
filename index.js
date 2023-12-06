@@ -1,10 +1,10 @@
-const doubledArr = (arr) => {
-    let doubledArray = arr.map(a => {
-        return a + a;
+const convertToString = (arr) => {
+    let convertedArr = arr.map(a => {
+        return a.toString();
     });
-    return doubledArray;
+    return convertedArr;
 };
 
-const x = [2, 3, 4, 5, 8];
-console.log(doubledArr(x));
+const x = [10, 23, 51, 72, 32];
+console.log(convertToString(x));
 
