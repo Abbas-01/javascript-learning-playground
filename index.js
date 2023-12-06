@@ -1,8 +1,28 @@
-const fahrenheitToCelsius = (arr) => {
+const usersNameArr = (arr) => {
     return arr.map((a, i, arr) => {
-        return Math.round((a - 32) * 5/9) + "°C"; 
+        return a.userName;
     })
 };
 
-const fahrenheitArr = [32, 16, 81, 43];
-console.log(fahrenheitToCelsius(fahrenheitArr));
+const usersData = [{
+    userName: "Abbas-01",  
+    age: 15,
+    city: "Matli"
+}, {
+    userName: "Tanveer786",
+    age: 23,
+    city: "Matli"
+}, {
+    userName: "Aleey1",
+    age: 19,
+    city: "Matli"
+}, {
+    userName: "Asad-Ullah",
+    age: 16,
+    city: "Matli"
+}, {
+    userName: "Farzain_Ahmed",
+    age: 16,
+    city: "Matli"
+}];
+console.log(usersNameArr(usersData));
