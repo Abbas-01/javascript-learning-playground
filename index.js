@@ -1,8 +1,8 @@
-const filterWords = (arr) => {
-    return arr.filter(word => {
-        return word.length > 5;
+const filterNames = (arr) => {
+    return arr.filter(name => {
+        return name[0] === "A" ;
     })
 } 
 
-const wordsArr = ["Tree", "Aeroplane", "Book", "Laptop", "Computer", "Window"];
-console.log(filterWords(wordsArr));
+const namesArr = ["Abbas", "Tanveer", "Ali", "Asad", "Farzain", "Shaheer"];
+console.log(filterNames(namesArr));
