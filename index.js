@@ -10,9 +10,9 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-const userBooks = (Genre) => {
+const userBooks = (Genre, publishDate) => {
     return books.filter((book) => {
-        return book.genre === Genre;
+        return book.genre === Genre && book.publish >= publishDate;
     });
 };
-console.log(userBooks("Non-Fiction"))
+console.log(userBooks("Non-Fiction", 1980))
