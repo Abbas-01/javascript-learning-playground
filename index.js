@@ -1,8 +1,8 @@
-const filterNames = (arr) => {
-    return arr.filter(name => {
-        return name[0] === "A" ;
+const positiveNums = (arr) => {
+    return arr.filter(num => {
+        return num > 0;
     })
 } 
 
-const namesArr = ["Abbas", "Tanveer", "Ali", "Asad", "Farzain", "Shaheer"];
-console.log(filterNames(namesArr));
+const numbersArr = [32, -6, -1, -11, 7, 22];
+console.log(positiveNums(numbersArr));
