@@ -1,6 +1,8 @@
-const filterOddNums = (arr) => {
-    return arr.filter(num => {
-        return num % 2 !== 0;
+const filterWords = (arr) => {
+    return arr.filter(word => {
+        return word.length > 5;
     })
 } 
-console.log(filterOddNums([1, 2, 3, 4, 5]));
+
+const wordsArr = ["Tree", "Aeroplane", "Book", "Laptop", "Computer", "Window"];
+console.log(filterWords(wordsArr));
