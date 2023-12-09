@@ -1,19 +1,19 @@
-    const isPalindrome = (str) => {
-        for (let i = 0; i < str.length / 2; i++) {  
-            if(str[i] !== str[str.length - 1 - i]) {
-                return false;
-            }
+const isPrimeNum = (num) => {
+    for (let i = 2; i < num; i++) {
+        if (num % 2 === 0) {
+            return false
         }
-        return true;
     }
-    
-    const helo = (arr) => {
-        return arr.filter(item => {
-            if (isPalindrome(item.toLowerCase())) {
-                return item;
-            }
-        });
-    }
+    return true;
+}
+const primeNum = (arr) => {
+    return arr.filter(num => {
+        if (isPrimeNum(num)) {
+            return num;
+        }
+    });
 
-    const x = ["AbsbA", "civic", "Nissan", "amma"];
-    console.log(helo(x));
+}
+
+const x = [2, 4, 3, 5, 7, 6, 11, 13];
+console.log(primeNum(x));
