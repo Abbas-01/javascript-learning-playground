@@ -1,12 +1,29 @@
-const filterPrimeNums = (arr) => {
-    return arr.filter(num => {
-        for (let i = 2; i < num; i++) {
-            if (num % i === 0) {
-                return false;       
-            }
-        }
-        return num;
+const filterStatus = (userStatus) => {
+    return data.filter(item => {
+        return item.status === userStatus;
     })
 };
-const numsArr = [4, 7, 23, 9, 16, 25, 53];
-console.log(filterPrimeNums(numsArr))
+const data = [
+    {
+        name: "Abbas",
+        age: 15,
+        status: "Focused"
+    },{
+        name: "Ali",
+        age: 19,
+        status: "Chill"
+    },{
+        name: "Tanveer",
+        age: 24,
+        status: "Focused"
+    },{
+        name: "Asad",
+        age: 16,
+        status: "Chill"
+    },{
+        name: "Farzain",
+        age: 16,
+        status: "Chill"
+    }, 
+];
+console.log(filterStatus("Focused"));
