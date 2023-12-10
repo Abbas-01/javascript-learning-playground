@@ -1,5 +1,6 @@
-const productOfElements = (arr) => {
-    return arr.reduce((acc, currVal) => acc * currVal, 1);
+const averageOfElements = (arr) => {
+    let sumOfEle =  arr.reduce((acc, currVal) => acc+currVal);
+    return sumOfEle / arr.length;
 }
 
-console.log(productOfElements([5, 2, 11, 2, 3]));
+console.log(averageOfElements([20, 40, 60, 80, 100]));
