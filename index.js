@@ -1,24 +1,5 @@
-
-const shoppingCart = [
-    {
-        itemName: "js course",
-        price: 2999
-    },
-    {
-        itemName: "py course",
-        price: 999
-    },
-    {
-        itemName: "mobile dev course",
-        price: 5999
-    },
-    {
-        itemName: "data science course",
-        price: 12999
-    },
-]
-
-const totalPrice = (arr) => {
-    return arr.reduce((acc, currVal) => acc+currVal.price, 0);
+const productOfElements = (arr) => {
+    return arr.reduce((acc, currVal) => acc * currVal, 1);
 }
-console.log(totalPrice(shoppingCart));
+
+console.log(productOfElements([5, 2, 11, 2, 3]));
