@@ -1,5 +1,12 @@
-const concatStrings = (arr) => {
-    return arr.reduce((acc, currval) => acc+ " " + currval);
+const countOccurrences = (arr) => {
+    return arr.reduce((acc, currVal) => {
+        if (acc[currVal]) {
+            acc[currVal]++;
+        } else {
+            acc[currVal] = 1;
+        }
+        return acc;
+    }, {});
 }
 
-console.log(concatStrings(["Hello", "My", "Name", "is", "Abbas"]));
+console.log(countOccurrences(["Abbas", "Nissan", "Tanveer", "Abbas", "Nissan", "Tanveer", "Abbas"]));
