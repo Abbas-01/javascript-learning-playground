@@ -1,6 +1,5 @@
-const averageOfElements = (arr) => {
-    let sumOfEle =  arr.reduce((acc, currVal) => acc+currVal);
-    return sumOfEle / arr.length;
+const concatStrings = (arr) => {
+    return arr.reduce((acc, currval) => acc+ " " + currval);
 }
 
-console.log(averageOfElements([20, 40, 60, 80, 100]));
+console.log(concatStrings(["Hello", "My", "Name", "is", "Abbas"]));
