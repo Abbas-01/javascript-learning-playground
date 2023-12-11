@@ -1,12 +1,7 @@
-const countOccurrences = (arr) => {
-    return arr.reduce((acc, currVal) => {
-        if (acc[currVal]) {
-            acc[currVal]++;
-        } else {
-            acc[currVal] = 1;
-        }
-        return acc;
-    }, {});
-}
+const findMax = (arr) => {
+    return arr.reduce((max, currVal) => {
+        return max < currVal ? max = currVal : max;
+    }, arr[0])
+};
 
-console.log(countOccurrences(["Abbas", "Nissan", "Tanveer", "Abbas", "Nissan", "Tanveer", "Abbas"]));
+console.log(findMax([2, 3, 4, 12, 74, 1, 23, 62]));
