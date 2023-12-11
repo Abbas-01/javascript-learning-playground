@@ -1,7 +1,38 @@
-const findMax = (arr) => {
-    return arr.reduce((max, currVal) => {
-        return max < currVal ? max = currVal : max;
-    }, arr[0])
+const data = [
+    {
+        userName: "Abbas",
+        password: "aod29na0",
+        age: 16
+    }, {
+        userName: "Tanveer",
+        password: "a1312ca0",
+        age: 24
+    },{
+        userName: "Farzain",
+        password: "adb28a0h",
+        age: 16
+    },{
+        userName: "Ali",
+        password: "5623znaa2",
+        age: 19
+    },{
+        userName: "Asad",
+        password: "219anghg9",
+        age: 16
+    },{
+        userName: "Hanzala",
+        password: "12n9xa1a",
+        age: 16
+    },
+];
+
+const filterByAge = (arr) => {
+    return arr.reduce((acc, currVal) => {
+        if (currVal.age > 18) {
+            acc.push(currVal);
+        }
+        return acc;
+    }, [])
 };
 
-console.log(findMax([2, 3, 4, 12, 74, 1, 23, 62]));
+console.log(filterByAge(data));
