@@ -26,13 +26,15 @@ const data = [
     },
 ];
 
-const filterByAge = (arr) => {
+const groupByProperty = (arr) => {
     return arr.reduce((acc, currVal) => {
         if (currVal.age > 18) {
-            acc.push(currVal);
+            acc.adult.push(currVal);
+        } else {
+            acc.teen.push(currVal);
         }
         return acc;
-    }, [])
+    }, {adult: [],teen: []});
 };
 
-console.log(filterByAge(data));
+console.log(groupByProperty(data));
