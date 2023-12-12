@@ -1,7 +1,3 @@
-const revString = (str) => {
-  return str.split("")  .reduce((acc, currVal) => {
-    return currVal + acc  
-  }, " ")
-}
-
-console.log(revString("Abbas"));
+let a = "Hello One two three";
+let b = a.split("")
+console.log(b)
