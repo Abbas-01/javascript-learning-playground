@@ -1,4 +1,3 @@
-const revStr = (str) => {
-    return str.split("").reverse().join("");
-}
-console.log(revStr("Abbas"));
+const myArr = ["Abbas", "Ali", "Tanveer", "Hanzala", "Asad"];
+myArr.splice(3, 0, "Ashiq");
+console.log(myArr);
