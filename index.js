@@ -1,3 +1,3 @@
 const myArr = ["Abbas", "Ali", "Tanveer", "Hanzala", "Asad"];
-myArr.splice(3, 1, "Ashiq");
+myArr.splice(-2, 2, "Ashiq", "Chalgri");
 console.log(myArr);
