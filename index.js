@@ -1,3 +1,4 @@
-const myArr = ["Hello", "World!"];
-const myStr = myArr.join(", ");
-console.log(myStr)
+const revStr = (str) => {
+    return str.split("").reverse().join("");
+}
+console.log(revStr("Abbas"));
