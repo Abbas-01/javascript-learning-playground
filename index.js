@@ -1,3 +1,14 @@
-const myArr = ["Abbas", "Ali", "Tanveer", "Hanzala", "Asad"];
-myArr.splice(-2, 2, "Ashiq", "Chalgri");
-console.log(myArr);
+const carsPrototype = {
+    model: "Ford GT",
+    color: "Red",
+    doors: 2,
+    engine () {
+        return "V6";
+    },
+    sound () {
+        return "Vrooom!"
+    }
+};
+
+const audi = Object.create(carsPrototype);
+console.log(audi.sound())
