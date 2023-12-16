@@ -1,3 +1,3 @@
-const title = document.querySelector("#mainHeading");
+const paragraph = document.querySelector(".dummyParagraph");
 
-title.textContent = "Modifying h1 element using javascript";
+paragraph.innerHTML = "Modifying HTML using <b>javascript</b>"
