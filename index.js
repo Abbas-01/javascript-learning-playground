@@ -1,5 +1,3 @@
-const subHeadings = document.querySelectorAll("#subHeading");
-console.log(subHeadings);
-
-const paragrahs = document.querySelectorAll(".dummyParagraph");
-console.log(paragrahs);
+const title = document.querySelector("#mainHeading");
+title.style.color = "indigo";
+title.style.textDecoration = "underline";
