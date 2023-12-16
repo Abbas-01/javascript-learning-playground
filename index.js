@@ -1,3 +1,3 @@
 const title = document.querySelector("#mainHeading");
-title.style.color = "indigo";
-title.style.textDecoration = "underline";
+
+title.textContent = "Modifying h1 element using javascript";
