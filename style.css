@@ -9,12 +9,16 @@ body {
  h1 {
     font-size: 3rem;
     font-family: sans-serif;
+    text-align: center; 
+    padding-block: 1.8rem;
+ }
+ h2 {
     text-align: center;
-    margin-top: 20%;
+    padding-top: 1.5rem;
  }
  p {
     width: 80ch;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-inline: auto;
     text-align: center;
  }

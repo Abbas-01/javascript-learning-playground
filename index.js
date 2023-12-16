@@ -1,2 +1,5 @@
-const h1 = document.getElementsByClassName("dummyParagraph");
-console.log(h1);
+const subHeadings = document.querySelectorAll("#subHeading");
+console.log(subHeadings);
+
+const paragrahs = document.querySelectorAll(".dummyParagraph");
+console.log(paragrahs);
