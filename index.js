@@ -1,3 +1,12 @@
-const paragraph = document.querySelector(".dummyParagraph");
+const subHeadings = document.getElementsByClassName("subHeading");
+const paragraphs = document.querySelectorAll(".dummyParagraph");
 
-paragraph.innerHTML = "Modifying HTML using <b>javascript</b>"
+const subHeadingsArray = Array.from(subHeadings);
+const paragraphsArray = Array.from(paragraphs);
+subHeadingsArray.forEach(subHeading => {
+    subHeading.style.color = "indigo"
+})
+paragraphsArray.forEach(para => {
+    para.style.color = "violet";
+})
+
