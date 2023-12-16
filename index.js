@@ -1,2 +1,2 @@
-const h1 = document.getElementById("javascriptHeading");
+const h1 = document.getElementsByClassName("dummyParagraph");
 console.log(h1);
