@@ -1,8 +1,4 @@
-const parent = document.querySelector(".container");
+const childElement = document.querySelector(".paragraph");
 
-const first = parent.firstElementChild;
-const second = parent.children[1];
-const last = parent.lastElementChild
-console.log(first)
-console.log(second)
-console.log(last)
+const parenEle = childElement.parentElement;
+console.log(parenEle);
