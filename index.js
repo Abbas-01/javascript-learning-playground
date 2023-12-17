@@ -1,9 +1,8 @@
-const titleCase = (str) => {
-    let stringArr  = str.split(" ");
-    const newStringArr = stringArr.map(string => {
-        let firstLetter = string[0].toUpperCase();
-        return firstLetter + string.slice(1).toLowerCase();
-    })
-    return newStringArr.join(" ")
-}
-console.log(titleCase("abbas here hello aasdi adas"))
+const parent = document.querySelector(".container");
+
+const first = parent.firstElementChild;
+const second = parent.children[1];
+const last = parent.lastElementChild
+console.log(first)
+console.log(second)
+console.log(last)
