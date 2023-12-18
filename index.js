@@ -1,4 +1,2 @@
-const childElement = document.querySelector(".paragraph");
-
-const parenEle = childElement.parentElement;
-console.log(parenEle);
+const div = document.createElement("div");
+console.log(div)
