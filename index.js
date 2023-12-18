@@ -1,3 +1,4 @@
-const div = document.createElement("div");
-div.setAttribute("title", "A container");
-console.log(div.hasAttribute("title"))
+const paragraph = document.createElement("p");
+paragraph.setAttribute("class", "paragraph");
+paragraph.textContent = "This is a paragraph";
+document.body.appendChild(paragraph);
