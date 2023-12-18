@@ -1,2 +1,3 @@
 const div = document.createElement("div");
-console.log(div)
+div.className = "container";
+console.log(div.className)
