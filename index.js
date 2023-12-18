@@ -1,3 +1,3 @@
 const div = document.createElement("div");
-div.className = "container";
-console.log(div.className)
+div.id = "parent";
+console.log(div.id)
