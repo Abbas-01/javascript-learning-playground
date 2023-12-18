@@ -1,3 +1,3 @@
 const div = document.createElement("div");
-div.setAttribute("id", "container");
-console.log(div.getAttribute("id"))
+div.setAttribute("title", "A container");
+console.log(div.hasAttribute("title"))
