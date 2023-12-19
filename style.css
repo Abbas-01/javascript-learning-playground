@@ -15,50 +15,22 @@ body {
 }
 h1 {
    text-align: center;
+   font-size: 3rem;
    margin-block: clamp(1rem, 6vh, 4.5rem);
 }
-
-form {
-   width: max(300px, 35vw);
-   background-color: antiquewhite;
+.stopWatch {
+   width: 250px;
+   aspect-ratio: 1 / 0.3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    margin-inline: auto;
-   padding-block: 1rem;
    border-radius: 10px;
-}
-.heightInput,
-.weightInput {
-
-   margin-left: 2rem;
-   margin-block: 2rem;
-}  
-label {
-   font-size: 1.5rem;
    cursor: pointer;
+   background-color: goldenrod;
 }
-input {
-   font-size: 1.3rem;
-}
-button {
-   font-size: 1.3rem;
-   margin-left: 2rem;
-   padding: 0.4em 0.8em;
-}
-.guideSection {
-   margin-top: 2.5rem;
-   padding: 0.8rem;
-}
-.guideSection h3 {
-   font-size: 1.6rem;
-}
-.guideSection p {
-   font-size: 1.1rem;
-   text-indent: 2rem;
-   line-height: 1.4;
-   margin-block: 0.5rem;
-}
-#result {
-   display: block;
-   text-align: center;
-   margin-top: 2rem;
-   font-size: 1.3rem;
+.time {
+   font-size: 2.2rem;
+   text-transform: uppercase;
+   color: #fff;
 }
