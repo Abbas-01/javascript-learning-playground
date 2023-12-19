@@ -17,32 +17,48 @@ h1 {
    text-align: center;
    margin-block: clamp(1rem, 6vh, 4.5rem);
 }
-.container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   gap: 1rem;
-   margin-inline: 1rem;
+
+form {
+   width: max(300px, 35vw);
+   background-color: antiquewhite;
+   margin-inline: auto;
+   padding-block: 1rem;
+   border-radius: 10px;
 }
-.container li {
-   width: 190px;
-   aspect-ratio: 1/ 1;
-   border: 2px solid #333;
-   border-radius: 5px;
+.heightInput,
+.weightInput {
+
+   margin-left: 2rem;
+   margin-block: 2rem;
+}  
+label {
+   font-size: 1.5rem;
    cursor: pointer;
-
 }
-.container li:first-child {
-   background-color: rgb(177, 177, 177);
+input {
+   font-size: 1.3rem;
 }
-.container li:nth-child(2) {
-   background-color: rgb(255, 73, 73);
+button {
+   font-size: 1.3rem;
+   margin-left: 2rem;
+   padding: 0.4em 0.8em;
 }
-.container li:nth-child(3) {
-   background-color: rgb(240, 240, 94);
+.guideSection {
+   margin-top: 2.5rem;
+   padding: 0.8rem;
 }
-.container li:last-child {
-   background-color: rgb(66, 66, 255);
+.guideSection h3 {
+   font-size: 1.6rem;
 }
-
+.guideSection p {
+   font-size: 1.1rem;
+   text-indent: 2rem;
+   line-height: 1.4;
+   margin-block: 0.5rem;
+}
+#result {
+   display: block;
+   text-align: center;
+   margin-top: 2rem;
+   font-size: 1.3rem;
+}

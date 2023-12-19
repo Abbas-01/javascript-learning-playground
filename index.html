@@ -9,16 +9,30 @@
 </head>
 
 <body>
-    <h1>Color Scheme Switcher</h1>
 
-    <ul class="container">
-        <li id="gray"></li>
-        <li id="red"></li>
-        <li id="yellow"></li>
-        <li id="blue"></li>
-    </ul>
+    <h1>BMI Calculator</h1>
 
+    <form>
+        <p class="weightInput">
+            <label for="weightInput">Weight in KG:</label>
+            <input type="text" name="weight of person" id="weightInput">
+        </p>
 
+        <p class="heightInput">
+            <label for="heightInput">Height in CM:</label>
+            <input type="text" name="height of person" id="heightInput">
+        </p>
+
+        <button type="submit">Calculate</button>
+
+        <span id="result"></span>
+
+        <section class="guideSection">
+            <h3>BMI Weight Guide</h3>
+            <p>A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9.</p>
+        </section>
+        
+    </form>
     <script src="index.js"></script>
 </body>
 
