@@ -1,32 +1,79 @@
-const time = document.querySelector(".time");
-const timeFormat = (hour, min, sec) => {
-    return `${hour < 10 ? '0' : ''}${hour} : ${min < 9 ? '0' : ''}${min} : ${sec < 9 ? '0' : ''}${sec}`
-};
+let randonNum = Math.ceil(Math.random() * 100);
 
-let count = 0;
-let timerFunc;
-const stopWatchFunc = () => {
-    let sec = 0;
-    let min = 0;
-    let hour = 0;
-    if (count === 0) {
-        count = 1;
-        time.innerHTML = timeFormat(hour, min, sec);
-        timerFunc = setInterval(() => {
-            sec++;
-            if (sec === 60) {
-                sec = 0;
-                min++;
-                if (min === 60) {
-                    min = 0;
-                    hour++;
-                }
-            }
-            time.innerHTML = timeFormat(hour, min, sec);  
-        }, 1000);    
+const guessInput = document.querySelector("#guessField");
+const submitBtn = document.querySelector("#subt");
+const userGuesses = document.querySelector("#guesses");
+const remaining = document.querySelector("#remainingGuess");
+const lowHigh = document.querySelector("#lowOrHigh");
+const userResults = document.querySelector(".userResults");
+
+let prevGuesses = [];
+let playGame = true;
+
+const div = document.createElement("div");
+
+if (playGame) {
+    submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const userGuess = parseInt(guessInput.value);
+        guessValidation(userGuess);
+    })
+}
+
+function guessValidation (guess) {
+    console.log(prevGuesses)
+    if (isNaN(guess)) {
+        alert("Please give us a valid Number");
+    } else if (guess < 1) {
+        alert("Please give us a number greater than 1");
+    } else if (guess > 100) {
+        alert("Please give us a number less than 100");
+    } else if (prevGuesses.indexOf(guess) >= 0) {
+        alert("Pleas give us unique numbers");
     } else {
-        count = 0;
-        clearInterval(timerFunc)
-        time.innerHTML = "Start";
+        prevGuesses.push(guess);
+        if (remaining.innerHTML < 1) {
+            lowHigh.innerHTML = `You have reached to the limit. The number was ${randonNum}`
+            endGame();
+        } else {
+            displayGuess(guess)
+            checkGuess(guess);
+        }
     }
-};
+    guessInput.value = "";
+}
+function checkGuess (guess) {
+        remaining.innerHTML--;
+        userGuesses.innerHTML += `${guess} `;
+}
+function displayGuess (guess) {
+    if (guess === randonNum) {
+        lowHigh.innerHTML = "Congratulations! you have guessed right"
+        endGame();
+    } else if (guess > randonNum) {
+        lowHigh.innerHTML = "Your guess is greater than the number"
+    } else if (guess < randonNum) {
+        lowHigh.innerHTML = "Your guess is less than the number"
+    }
+}
+function endGame () {
+    playGame = false;
+    guessInput.setAttribute("disabled", "");
+    userResults.appendChild(div);
+    div.classList.add("startBtn")
+    div.innerHTML = `<h2 class="newGameBtn">Start a New Game</h2>`;
+    newGame();
+}
+function newGame() {
+    const startBtn = document.querySelector(".newGameBtn");
+    startBtn.addEventListener("click", (e) => {
+        randonNum = Math.ceil(Math.random() * 100);
+        playGame = true;
+        guessInput.removeAttribute("disabled")
+        userResults.removeChild(div);
+        prevGuesses = []
+        remaining.innerHTML = 10;
+        userGuesses.innerHTML = "";
+        lowHigh.innerHTML = "";
+    })
+}

@@ -12,25 +12,83 @@ a {
 }
 body {
    font-family: sans-serif;
+}  
+.container {
+   width: max(45vw,300px);
+   background-image: linear-gradient(140deg, rgb(66, 198, 255), rgb(111, 45, 255));
+   margin-block: clamp(1rem, 6vh, 4.5rem);
+   margin-inline: auto;
+   padding: 1rem;
+   border-radius: 10px;
 }
 h1 {
-   text-align: center;
    font-size: 3rem;
-   margin-block: clamp(1rem, 6vh, 4.5rem);
-}
-.stopWatch {
-   width: 250px;
-   aspect-ratio: 1 / 0.3;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-inline: auto;
-   border-radius: 10px;
-   cursor: pointer;
-   background-color: goldenrod;
-}
-.time {
-   font-size: 2.2rem;
-   text-transform: uppercase;
+   text-align: center;
    color: #fff;
+}
+p {
+   text-align: center;
+   margin-block: 1rem;
+   font-weight: bold;
+   color: #fff;
+}
+form {
+   margin-block: 2rem;
+}
+.guess {
+   display: block;
+   font-size: 2.2rem;
+   text-align: center;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   cursor: pointer;
+   color: #fff;
+}
+input {
+   width: max(5vw, 100px);
+   height: 50px;
+   font-size: 2rem;
+   text-align: center;
+}
+button {
+   display: block;
+   /* width: 180px; */
+   font-size: 1.6rem;
+   margin-inline: auto;
+   padding: 0.6rem 0.7rem;
+   border-radius: 8px;
+   background-color: rgb(0, 0, 193);
+   color: #fff;
+   border: none;
+   cursor: pointer;
+}
+button:hover {
+   background-color: rgb(0, 0, 233);
+
+}
+h4 {
+   font-size: min(5vh,1.3rem);
+   text-align: center;
+   margin-bottom: 0.7rem;
+   color: #fff;
+}
+#lowOrHigh {
+   font-size: min(5vh,1.3rem);
+   color: #fff;
+}
+.startBtn {
+   width: max(40%, 210px);
+   font-size: min(5vh,1.3rem);
+   font-family: monospace;
+   text-align: center;
+   margin-inline: auto;
+   cursor:  pointer;
+   border-radius: 8px;
+   padding: 0.3em 0.2em;
+   /* background-color: #000; */
+   background-color: rgb(43, 43, 255);
+   color: #fff;
+}
+.startBtn:hover {
+   background-color: rgb(0, 0, 255);
 }
