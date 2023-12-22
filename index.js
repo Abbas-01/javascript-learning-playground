@@ -5,7 +5,7 @@ const submitBtn = document.querySelector("#subt");
 const userGuesses = document.querySelector("#guesses");
 const remaining = document.querySelector("#remainingGuess");
 const lowHigh = document.querySelector("#lowOrHigh");
-const userResults = document.querySelector(".userResults");
+const userResults = document.querySelector(".resultingParas");
 
 let prevGuesses = [];
 let playGame = true;
@@ -32,19 +32,20 @@ function guessValidation (guess) {
         alert("Pleas give us unique numbers");
     } else {
         prevGuesses.push(guess);
-        if (remaining.innerHTML < 1) {
-            lowHigh.innerHTML = `You have reached to the limit. The number was ${randonNum}`
-            endGame();
-        } else {
-            displayGuess(guess)
-            checkGuess(guess);
-        }
+        checkGuess(guess);
     }
     guessInput.value = "";
 }
 function checkGuess (guess) {
+    if (remaining.innerHTML < 1) {
+        lowHigh.innerHTML = `Game Over, The number was ${randonNum}`
+        endGame();
+    } else {
         remaining.innerHTML--;
         userGuesses.innerHTML += `${guess} `;
+        displayGuess(guess)
+    }
+     
 }
 function displayGuess (guess) {
     if (guess === randonNum) {
@@ -65,8 +66,8 @@ function endGame () {
     newGame();
 }
 function newGame() {
-    const startBtn = document.querySelector(".newGameBtn");
-    startBtn.addEventListener("click", (e) => {
+    const startGameBtn = document.querySelector(".newGameBtn");
+    startGameBtn.addEventListener("click", (e) => {
         randonNum = Math.ceil(Math.random() * 100);
         playGame = true;
         guessInput.removeAttribute("disabled")
