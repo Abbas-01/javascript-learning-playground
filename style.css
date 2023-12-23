@@ -13,3 +13,19 @@ a {
 body {
   font-family: sans-serif;
 }  
+.parent {
+  width: 400px;
+  aspect-ratio: 1 / 0.8;
+  background-color: aquamarine;
+}
+.child {
+  width: 250px;
+  aspect-ratio: 1 / 0.8;
+  background-color: rosybrown;
+}
+.subChild {
+  width: 150px;
+  aspect-ratio:  1/ 0.8;
+  background-color: cadetblue;
+  
+}
