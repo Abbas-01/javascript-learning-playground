@@ -2,16 +2,13 @@ const parent = document.querySelector(".parent");
 const child = document.querySelector(".child");
 const subChild = document.querySelector(".subChild");
 
-let count = 0;
 parent.addEventListener("click", (e) => {
-    console.log(count++)
     console.log("Parent")
 }, true);
 child.addEventListener("click", (e) => {
-    console.log(count++)
     console.log("Child")
-}, true);
+}, false);
 subChild.addEventListener("click", (e) => {
-    console.log(count++)
+    e.stopPropagation()
     console.log("Sub Child")
-}, true);
+}, false);
