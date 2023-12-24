@@ -14,18 +14,39 @@ body {
   font-family: sans-serif;
 }  
 .parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   width: 400px;
-  aspect-ratio: 1 / 0.8;
-  background-color: aquamarine;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin-inline: auto;
+  margin-top: 3rem;
 }
-.child {
-  width: 250px;
-  aspect-ratio: 1 / 0.8;
-  background-color: rosybrown;
+li {
+  cursor: pointer;
+  width: 200px; 
+  aspect-ratio: 1/ 0.3;
+  border: 3px solid #000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #333;
 }
-.subChild {
-  width: 150px;
-  aspect-ratio:  1/ 0.8;
-  background-color: cadetblue;
-  
+li:first-child {
+  background-color: rgb(88, 255, 121);
+}
+li:nth-child(2) {
+  background-color: rgb(58, 170, 255);
+}
+li:nth-child(3) {
+  background-color: rgb(255, 48, 69);
+}
+li:last-child {
+  background-color: rgb(255, 143, 63);
 }
