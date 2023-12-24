@@ -11,42 +11,35 @@ a {
   text-decoration: none;
 }
 body {
-  font-family: sans-serif;
+  font-family: sans-serif;  
 }  
-.parent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+
+form {
   width: 400px;
-  aspect-ratio: 1 / 1;
-  border: 2px solid #333;
-  border-radius: 5px;
-  margin-inline: auto;
+  background-color: lightblue;
   margin-top: 3rem;
+  margin-inline: auto;
+  padding: 2rem;
+  border-radius: 10px;
 }
-li {
-  cursor: pointer;
-  width: 200px; 
-  aspect-ratio: 1/ 0.3;
-  border: 3px solid #000;
-  border-radius: 5px;
+.numsInput {
+    width: 90%;
+    height: 50px;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+p {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  color: #333;
+  gap: 1rem;
+  margin-top: 1rem;
 }
-li:first-child {
-  background-color: rgb(88, 255, 121);
+.btns {
+  width: 60px;
+  font-size: 2.5rem;
 }
-li:nth-child(2) {
-  background-color: rgb(58, 170, 255);
-}
-li:nth-child(3) {
-  background-color: rgb(255, 48, 69);
-}
-li:last-child {
-  background-color: rgb(255, 143, 63);
+.resetBtn { 
+  display: inline-block;
+  width: 80px;
+  font-size: 1.5rem;
 }
