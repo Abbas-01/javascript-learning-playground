@@ -1,27 +1,52 @@
-const numInput = document.querySelector("#numberInput");
-const sumBtn = document.querySelector("#sumBtn");
-const resetBtn = document.querySelector("#resetBtn");
-const form = document.querySelector("form");
+const taskInput = document.querySelector("#taskInput");
+const addBtn = document.querySelector("#addBtn");
+const tasksContainer = document.querySelector(".taskSec");
 
-let sumOfNum = 0;
-
-sumBtn.addEventListener("click", (e) => {
-    const inputNum = parseInt(numInput.value);
-    if (!isNaN(inputNum)) {
-        sumOfNum += inputNum;
-        numInput.value = "";
+addBtn.addEventListener("click", (e) => {
+    const task = taskInput.value;
+    if (task === "") {
+        alert("Please give us valid character")
     } else {
-        alert("Please give us a valid Number")
-        numInput.value = "";
+        taskInput.value = "";
+
+        const taskWrapper = createTaskWrapper()
+        const taskContent = createTaskContent(task);
+        const doneBtn = createButton("completeTaskBtn", 'taskBtns', "&checkmark;")
+        const delBtn = createButton("delTaskBtn", "taskBtns", "&Cross;")
+
+        tasksContainer.appendChild(taskWrapper);
+        taskWrapper.append(taskContent, doneBtn, delBtn);
+
+        let done = true;
+        doneBtn.addEventListener("click", function () {
+            if (done) {
+                done = false
+                taskContent.style.textDecoration = "line-through";
+            } else {
+                done = true
+                taskContent.style.textDecoration = "none";
+            }
+        })
+        delBtn.addEventListener("click", function () {
+            tasksContainer.removeChild(taskWrapper)
+        })
     }
 })
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const inputNum = parseInt(numInput.value);
-    numInput.value = `${sumOfNum + inputNum}`;
-    sumOfNum = 0;
-})
-resetBtn.addEventListener("click", (e) => {
-    numInput.value = "";
-  sumOfNum = 0;  
-})
+function createTaskWrapper () {
+    const taskWrapper = document.createElement("div");
+    taskWrapper.classList.add("task");
+    return taskWrapper;
+}
+function createTaskContent (task) {
+    const taskContent = document.createElement("p");   
+    taskContent.classList.add("taskContent");
+    taskContent.innerHTML = `${task}`;
+    return taskContent;
+}
+
+function createButton (classNameOne, classNameTwo, innerHTML) {
+    const btn = document.createElement("button");
+    btn.classList.add(classNameOne, classNameTwo);
+    btn.innerHTML = innerHTML;
+    return btn;
+}
