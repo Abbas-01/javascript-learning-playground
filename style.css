@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --roboto: Roboto, sans-serif;
+  --roboto: 'Roboto', sans-serif;
 }
 
 * {
@@ -18,7 +18,7 @@ a {
 }
 body {
   height: 100vh;
-  font-family: sans-serif;  
+  font-family: var(--roboto);
 } 
 div {
   width: 500px;
