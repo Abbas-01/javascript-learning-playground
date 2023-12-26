@@ -1,10 +1,14 @@
-function myFunc (user) {
-    console.log(`Hello ${user}, Your Reminder!`)
+const startBtn = document.querySelector("#start");
+const stopBtn = document.querySelector("#stop");
+
+const sayDate = (myName) => {
+    console.log(myName + " " + Date.now());
 }
+let invalidID;
+startBtn.addEventListener("click", () => {
+    invalidID = setInterval(sayDate, 1000, "Abbas");      
+});
 
-const firstRemainder = setInterval(myFunc, 3000, "Abbas");
-const secRemainder = setInterval(myFunc, 2000, "Asad");
-
-setTimeout(function clearRemainder () {
-    clearInterval(firstRemainder)
-}, 3000)
+stopBtn.addEventListener("click", () => {
+    clearInterval(invalidID);
+});

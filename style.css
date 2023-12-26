@@ -19,4 +19,18 @@ a {
 body {
   height: 100vh;
   font-family: sans-serif;  
-}  
+} 
+div {
+  width: 500px;
+  margin-top: 4rem;
+  margin-inline: auto;
+} 
+button {
+  display: inline-block;
+  font-size: 3rem;
+  margin-inline: 1rem;
+  padding: 0.2em 1em;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
