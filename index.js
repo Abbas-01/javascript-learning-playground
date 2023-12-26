@@ -1,23 +1,19 @@
-const body = document.querySelector("body");
-const startBtn = document.querySelector("#start");
-const stopBtn = document.querySelector("#stop");
+const insert = document.querySelector(".insert");
 
-let invalidID;
-function randomColor () {
-    let color = "";
-    for (let i = 0; i < 3; i++) {
-        color += ` ${Math.floor(Math.random() * 256)}` 
-    }
-    return body.style.backgroundColor = `rgb(${color})`
-}
-
-startBtn.addEventListener("click", () => {
-    if (!invalidID){
-        invalidID = setInterval(randomColor, 1000);
-    }
-})
-
-stopBtn.addEventListener("click", () => {
-    clearInterval(invalidID);
-    invalidID = null;
+window.addEventListener("keydown", (e) => {
+    insert.innerHTML = `
+    <table>
+            <thead>
+                <th>Key</th>
+                <th>Key Code</th>
+                <th>Code</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>${e.key === " " ? "space" : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </tbody>
+        </table>`
 })

@@ -17,20 +17,26 @@ a {
   text-decoration: none;
 }
 body {
-  height: 100vh;
+  height: 100%;
   font-family: var(--roboto);
+  background-color: rgb(70, 209, 255);
 } 
-div {
-  width: 500px;
+
+table,
+th,
+td {
+  border: 2px solid #000;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.insert {
+  width: fit-content;
   margin-top: 4rem;
   margin-inline: auto;
-} 
-button {
-  display: inline-block;
-  font-size: 3rem;
-  margin-inline: 1rem;
-  padding: 0.2em 1em;
-  cursor: pointer;
-  border: 2px solid #000;
-  border-radius: 10px;
+}
+.key {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
 }
