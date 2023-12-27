@@ -25,36 +25,3 @@ body {
   align-items: center;
   font-family: var(--roboto);
 } 
-
-.card {
-  width: 380px;
-  height: 400px;
-  background-image: linear-gradient(180deg, rgb(37, 37, 255), black);  
-  border-radius: 10px;
-}
-.imgWrapper {
-  width: 260px;
-  aspect-ratio: 1 / 1;
-  margin-inline: auto;
-  margin-block: 1.3rem;
-}
-img {
-  width: 100%;
-  height: 100%;
-  outline: 2px solid #fff;
-  outline-offset: 5px;
-  border-radius: 50%;
-}
-.userInfo {   
-  margin-left: 2rem;
-  line-height: 1.6;
-}
-.userInfo p {
-  color: #fff;
-  font-size: 1.2rem;
-}
-.userInfo p span{
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 1.2px;
-}
