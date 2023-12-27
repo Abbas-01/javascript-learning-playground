@@ -21,3 +21,6 @@ myPromise
 .catch(function(error){
     console.log(error);
 })
+.finally(function(userData, error) {
+    console.log("The promise is either resolve or reject")
+})
