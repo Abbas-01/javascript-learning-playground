@@ -25,3 +25,10 @@ body {
   align-items: center;
   font-family: var(--roboto);
 } 
+.img {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  background-color: red;
+
+  border-radius: 50%;
+}

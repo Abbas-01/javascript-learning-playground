@@ -1,22 +1,39 @@
-const myPromise = new Promise((resolve, reject) => {
-    setTimeout(function () {
-        let error = true;
-        if (!error) {
-            console.log("Async Task")
-            resolve({userName: "Abbas", age: 16})
-        } else {
-            reject("Error: There is an error")
+const getWeather = () => {
+    let weather = true
+    return new Promise (function(resolve, reject) {
+        if (weather) {
+            setTimeout(function() {
+                resolve("ainy")
+            }, 3000)
         }
-    }, 1000)
-})
+    })
+}
 
-async function consumeMyPromise () {
-       try {
-        const data = await myPromise;
-        console.log(data);
-       } catch (error) {
-        console.log(error)
-       }
-} 
+function weatherIcon (weather) {
+    return new Promise(function (resolve, reject) {
+        switch (weather) {
+           case "Sunny":
+            resolve("S")
+            break;
+            case "Rainy":
+                resolve("R")
+            break;
+            case "Cloudy":
+                resolve("C")
+            break;
+            default :
+            reject("Not Found")
+            break;
+         } 
+    })
+}
+function onSucc (data) {
+    console.log("Success " + data)
+}
+function onFail (error) {
+    console.log("Error " + error)
+}
 
-consumeMyPromise()
+getWeather()
+.then(weatherIcon)
+.then(onSucc, onFail)
