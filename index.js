@@ -1,6 +1,6 @@
-const url = ("https://jsonplaceholder.typicode.com/posts");
+const url = ("https://jsonplaceholder.typicode.com/posts/1");
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     body: JSON.stringify({
         user_Id: 404,
         name: "Abbas",
