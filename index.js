@@ -1,39 +1,19 @@
-const getWeather = () => {
-    let weather = true
-    return new Promise (function(resolve, reject) {
-        if (weather) {
-            setTimeout(function() {
-                resolve("ainy")
-            }, 3000)
-        }
-    })
-}
+const url = ("https://jsonplaceholder.typicode.com/posts");
+fetch(url, {
+    method: "POST",
+    body: JSON.stringify({
+        user_Id: 404,
+        name: "Abbas",
+        hobbies: "Coding, Gaming, Eating"
+    }),
+    headers: {
+        "Content-Type": "application/json"
+    }
+})
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data)
+})
 
-function weatherIcon (weather) {
-    return new Promise(function (resolve, reject) {
-        switch (weather) {
-           case "Sunny":
-            resolve("S")
-            break;
-            case "Rainy":
-                resolve("R")
-            break;
-            case "Cloudy":
-                resolve("C")
-            break;
-            default :
-            reject("Not Found")
-            break;
-         } 
-    })
-}
-function onSucc (data) {
-    console.log("Success " + data)
-}
-function onFail (error) {
-    console.log("Error " + error)
-}
-
-getWeather()
-.then(weatherIcon)
-.then(onSucc, onFail)
