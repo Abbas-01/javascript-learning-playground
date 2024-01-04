@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 
 :root {
   --roboto: 'Roboto', sans-serif;
 }
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 figcaption {
   position: absolute;
@@ -18,17 +18,118 @@ li {
 a {
   text-decoration: none;
 }
+button {
+  cursor: pointer;
+}
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: var(--roboto);
 } 
-.img {
-  width: 300px;
-  aspect-ratio: 1 / 1;
-  background-color: red;
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.calculator {
+  width: 600px;
+  background-color: antiquewhite;
+  margin-top: 2rem;
+  margin-inline: auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.calculator p {
+  margin-top: 2rem;
+  /* margin-left: 1rem; */
+}
+.calculator p input {
+  width: 90%;
+  font-size: 1.8rem;
+  padding: 1rem 0.8rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  border: 1px solid #000;
+}
+.container {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+.numsWrapper {
+  width: 60%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+} 
 
+.numsWrapper .num {
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
+  color: #fff;
+  background-color: rebeccapurple;
+  border: none;
+}
+.numsWrapper .num span {
+  display: block;
+  font-size: 2rem;
+  background-color: transparent;
+}
+.symbolsWrapper {
+  width: 26%;
+  margin-top: 1rem;
+}
+.symbolsWrapper .symbol {
+  width: 90px;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  background-color: rebeccapurple;
+  
+}
+.symbolsWrapper .symbol span {
+  display: block;
+  font-size: 2.5rem;
+   background-color: transparent;
+}
+.calBtn {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  left: 13rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  background-color: rebeccapurple;
+}
+.calBtn span {
+  display: block;
+  font-size: 2.5rem;
+  background-color: transparent;
+}
+.resBtn {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  left: -0.5rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  background-color: rebeccapurple; 
+}
+.resBtn span {
+  display: block;
+  font-size: 2.5rem;
+  background-color: transparent;
 }
