@@ -11,65 +11,30 @@
 <body>
 
     <section class="calculator">
-        <h1>Calculator</h1>
-        <p>
-            <input type="text" class="value input" id="valueInput">
+        <p class="inputWrapper">
+            <input type="text" class="value input" id="valueInput" readonly="true">
         </p>
 
-        <div class="container">
-
-            <div class="numsWrapper">
-                <button class="num">
-                    <span id="one">1</span>
-                </button>
-                <button class="num">
-                    <span id="two">2</span>
-                </button>
-                <button class="num">
-                    <span id="three">3</span>
-                </button>
-                <button class="num">
-                    <span id="four">4</span>
-                </button>
-                <button class="num">
-                    <span id="five">5</span>
-                </button>
-                <button class="num">
-                    <span id="six">6</span>
-                </button>
-                <button class="num">
-                    <span id="seven">7</span>
-                </button>
-                <button class="num">
-                    <span id="eight">8</span>
-                </button>
-                <button class="num">
-                    <span id="nine">9</span>
-                </button>
-                <button class="num">
-                    <span id="zero">0</span>
-                </button>
-            </div>
-            <button class="calBtn">
-                <span id="equal">=</span>
-            </button>
-            <button class="resBtn">
-                <span id="reset">R</span>
-            </button>
-            <div class="symbolsWrapper">
-                <button class="symbol plus">
-                    <span id="plus">+</span>
-                </button>
-                <button class="symbol minus">
-                    <span id="minus">-</span>
-                </button>
-                <button class="symbol multiply">
-                    <span id="multiply">*</span>
-                </button>
-                <button class="symbol divide">
-                    <span id="divide">/</span>
-                </button>
-            </div>
+        <div class="btnsContainer">
+            <button class="resBtn">AC</button>
+            <button class="delBtn">DEL</button>
+            <button class="percentageBtn">%</button>
+            <button class="symbol divide lastCol">/</button>
+            <button class="symbol multiply lastCol">*</button>
+            <button class="symbol plus lastCol">+</button>
+            <button class="symbol minus lastCol">-</button>
+            <button class="num secRow">9</button>
+            <button class="num secRow">8</button>
+            <button class="num secRow">7</button>
+            <button class="num thirdRow">6</button>
+            <button class="num thirdRow">5</button>
+            <button class="num thirdRow">4</button>
+            <button class="num fourthRow">3</button>
+            <button class="num fourthRow">2</button>
+            <button class="num fourthRow">1</button>
+            <button class="num">0</button>
+            <button class="symbol">.</button>
+            <button class="evaluateBtn">=</button>
         </div>
     </section>
 

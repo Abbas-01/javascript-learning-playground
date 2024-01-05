@@ -1,69 +1,99 @@
 const valInput = document.querySelector("#valueInput");
-const numBtns = document.querySelectorAll(".num");
-const symbolBtns = document.querySelectorAll(".symbol");
-const calculateBtn = document.querySelector(".calBtn");
-const resetBtn = document.querySelector(".resBtn");
-const symbolBtnsArr = Array.from(symbolBtns);
+const btns = document.querySelectorAll("button");
+const btnsArr = Array.from(btns);
 
 let exp = "";
 
-function updateInputValue () {
-    valInput.value = exp;
-}
-
 function handleNumberBtnClick (btn) {
-    const value = btn.firstElementChild.innerHTML;
-    exp += value;
-    updateInputValue()    
-}
+    const number = btn.innerHTML;
+    exp += number;
+    valInput.value += number;    
+};
 function handleSymbolBtnClick (btn) {
-    const sign = btn.firstElementChild.innerHTML;
-
-    if (exp === "") {
-        alert("Please give a number first")   
+    const sign = btn.innerHTML;
+    if (exp === "") {   
         return;
     } else if (exp.length === 1) {
         exp += sign;
+        valInput.value += sign;
+    } else if (sign === "-") {
+        if (exp[exp.length - 1] === "*") {
+            exp += sign;
+            valInput.value += sign;
+        }  
     } else if(!isNaN(exp[exp.length-1])) {
         exp += sign;
+        valInput.value += sign;
     } else {
-        alert("Please give a number after a sign")
+        return;
     }
-    updateInputValue()
+};
+function handlePercentageBtnClick () {
+    let num = "";
+    const expArr = exp.split("");
+    if (exp === "") {
+        return;
+    } else {
+        for (let i = exp.length - 1; i >= 0; i--) {
+            if (!isNaN(exp[i])) {
+                num += exp[i];
+                expArr.pop();
+            } else {
+                break;
+            }
+        }
+        exp = expArr.join("");
+        let finalVal = num.split("").reverse().join("");
+        finalVal = finalVal / 100;
+        valInput.value += "%*";
+        exp += finalVal + "*";
+    }
 }
-
-function handleCalculateBtnClick () {
+function handleEvaluateBtnClick () {
     try {
         const result = new Function("return " + exp)();
-        valInput.value = result;
         exp = result.toString();
+        valInput.value = exp;
     } catch {
         alert("Expression Error")
     }
-}
+};
+
+function handleDeleteBtnClick () {
+    if (valInput.value.length === 1) {
+        exp = "";
+    } 
+    if (valInput.value.length > 0) {
+        const expArr = exp.split("");
+        const inputArr = valInput.value.split("");
+        expArr.pop();
+        inputArr.pop();
+        exp = expArr.join("");
+        valInput.value = inputArr.join("");        
+        console.log(exp)
+    }
+};
+
 function handleResetBtnClick () {
     exp = "";
-    updateInputValue();
-}
-numBtns.forEach(btn => {
+    valInput.value = "";
+};
+
+btnsArr.map(btn => {
     btn.addEventListener("click", (e) => {
-        e.preventDefault()
-        handleNumberBtnClick(btn)
+        e.preventDefault();
+        if(btn.classList.contains("num")) {
+            handleNumberBtnClick(btn);
+        } else if (btn.classList.contains("symbol")) {
+            handleSymbolBtnClick(btn);
+        } else if (btn.classList.contains("percentageBtn")) {
+            handlePercentageBtnClick();
+        } else if (btn.classList.contains("evaluateBtn")) {
+            handleEvaluateBtnClick();      
+        } else if (btn.classList.contains("delBtn")) {
+            handleDeleteBtnClick();
+        } else if (btn.classList.contains("resBtn")) {
+            handleResetBtnClick();
+        }
     })
-})
-
-symbolBtnsArr.map(btn => { 
-    btn.addEventListener("click", () => {
-        handleSymbolBtnClick(btn)
-      })
-})
-
-calculateBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    handleCalculateBtnClick();
-})
-
-resetBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    handleResetBtnClick()
-})
+});
