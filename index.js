@@ -11,44 +11,30 @@ function handleNumberBtnClick (btn) {
 };
 function handleSymbolBtnClick (btn) {
     const sign = btn.innerHTML;
-    if (exp === "") {   
-        return;
-    } else if (exp.length === 1) {
+    if (exp !== "" && (sign === "-" && exp[exp.length - 1] === "*" || exp.length === 1 || !isNaN(exp[exp.length - 1]))) {
         exp += sign;
-        valInput.value += sign;
-    } else if (sign === "-") {
-        if (exp[exp.length - 1] === "*") {
-            exp += sign;
-            valInput.value += sign;
-        }  
-    } else if(!isNaN(exp[exp.length-1])) {
-        exp += sign;
-        valInput.value += sign;
+        valInput.value  += sign;
     } else {
         return;
     }
 };
 function handlePercentageBtnClick () {
-    let num = "";
-    const expArr = exp.split("");
-    if (exp === "") {
-        return;
-    } else {
+    if (exp !== "") {
+        let num = "";
         for (let i = exp.length - 1; i >= 0; i--) {
             if (!isNaN(exp[i])) {
-                num += exp[i];
-                expArr.pop();
+                num = exp[i] + num;
             } else {
                 break;
             }
         }
-        exp = expArr.join("");
-        let finalVal = num.split("").reverse().join("");
-        finalVal = finalVal / 100;
+        const finalVal = parseFloat(num) / 100;
         valInput.value += "%*";
-        exp += finalVal + "*";
+        exp = `${exp.substring(0, exp.length - num.length)}${finalVal}*`;
+    } else {
+        return;
     }
-}
+}   
 function handleEvaluateBtnClick () {
     try {
         const result = new Function("return " + exp)();
@@ -97,3 +83,5 @@ btnsArr.map(btn => {
         }
     })
 });
+
+console.log((1 + 2) / 5)
