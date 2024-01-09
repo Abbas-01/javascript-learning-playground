@@ -12,34 +12,38 @@
 <body>
 
     <section class="weather">
-        <p class="wrapper">
-            <input type="text" name="weather of city" id="cityInput" placeholder="Enter Location Name">
-            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </p>
-        <div class="weatherDetails">
-            <figure class="imgWrapper">
-                <img src="" alt="" id="weatherImg">
-            </figure>
-            <p class="errorMessage hideShow"></p>
-            <p class="cityTemp hideShow"></p>
-            <p class="cityName hideShow"></p>
-            <div class="otherDetails">
-                <div class="humiditySec humidityWindSpeedSecs">
-                    <img src="/img/humidity.png" alt="Humidity Icon" id="humidityIcon">
-                    <div class="content">
+        <ul class="citiesList">
+            <li class="cityNames london">London</li>
+            <li class="cityNames sydney">Sydney</li>
+            <li class="cityNames tokyo">Tokyo</li>
+            <li class="cityNames toronto">Toronto</li>
+            <li class="cityNames paris">Paris</li>
+        </ul>
+            <p class="inputsWrapper">
+                <input type="text" name="weather of city" id="cityInput" placeholder="Search for city">
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </p>
+        <div class="weatherDetailsContainer">
+            <p class="cityName"></p>
+            <p class="cityWeather"></p>
+            <div class="currentTempDetails">
+                <figure class="imgWrapper">
+                    <img src="img/clear-sky.png" alt="" id="weatherImg">
+                </figure>
+                <p class="cityTemp"></p>
+                <div class="otherDetails">
+                    <div class="humiditySec humidityWindSpeedSecs">
+                        <img src="/img/air.png" alt="Humidity Icon" id="humidityIcon">
+                        <h4></h4>
                         <span id="humidity"></span>
-                        <h4>Humidity</h4>
                     </div>
-                </div>
-                <div class="windSpeedSec humidityWindSpeedSecs">
-                    <i class="fa-solid fa-wind"></i>
-                    <div class="content">
+                    <div class="windSpeedSec humidityWindSpeedSecs">
+                        <i class="fa-solid fa-wind"></i>
+                        <h4></h4>
                         <span id="windSpeed"></span>
-                        <h4>Wind Speed</h4>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
