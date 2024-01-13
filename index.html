@@ -10,43 +10,48 @@
 </head>
 
 <body>
+    <div class="signSelectingSec">
+        <p class="instructionMessage">Please select a sign first:</p>
+        <p class="signContainer">
+            <span class="sign" id="cross"></span> |
+            <span class="sign" id="zero"></span>
+        </p>
+    </div>
 
-    <section class="weather">
-        <ul class="citiesList">
-            <li class="cityNames london">London</li>
-            <li class="cityNames sydney">Sydney</li>
-            <li class="cityNames tokyo">Tokyo</li>
-            <li class="cityNames toronto">Toronto</li>
-            <li class="cityNames paris">Paris</li>
-        </ul>
-            <p class="inputsWrapper">
-                <input type="text" name="weather of city" id="cityInput" placeholder="Search for city">
-                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </p>
-        <div class="weatherDetailsContainer">
-            <p class="cityName"></p>
-            <p class="cityWeather"></p>
-            <div class="currentTempDetails">
-                <figure class="imgWrapper">
-                    <img src="img/clear-sky.png" alt="" id="weatherImg">
-                </figure>
-                <p class="cityTemp"></p>
-                <div class="otherDetails">
-                    <div class="humiditySec humidityWindSpeedSecs">
-                        <img src="/img/air.png" alt="Humidity Icon" id="humidityIcon">
-                        <h4></h4>
-                        <span id="humidity"></span>
-                    </div>
-                    <div class="windSpeedSec humidityWindSpeedSecs">
-                        <i class="fa-solid fa-wind"></i>
-                        <h4></h4>
-                        <span id="windSpeed"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <ul class="boxesWrapper">
+        <li isClicked="false" class="box firstRow" id="box1">
+        </li>
+        <li isClicked="false" class="box firstRow secCol" id="box2">
+        </li>
+        <li isClicked="false" class="box firstRow" id="box3">
+        </li>
+        <li isClicked="false" class="box secRow" id="box4">
+        </li>
+        <li isClicked="false" class="box secRow secCol" id="box5">
+        </li>
+        <li isClicked="false" class="box secRow " id="box6">
+        </li>
+        <li isClicked="false" class="box thirdRow" id="box7">
+        </li>
+        <li isClicked="false" class="box thirdRow secCol" id="box8">
+        </li>
+        <li isClicked="false" class="box thirdRow" id="box9">
+        </li>
+    </ul>
 
+    <div class="playersScoreSec">
+        <p class="crossContainer">
+            X:<span class="score" id="crossScore">0</span>
+        </p>
+        <p class="zeroContainer">
+            O:<span class="score" id="zeroScore">0</span>
+        </p>
+    </div>
+
+    <div class="restartBtnWrapper">
+        <button id="restartBtn">Restart Game</button>
+        <p id="winMessage"></p>
+    </div>
     <script src="index.js"></script>
 </body>
 

@@ -24,141 +24,152 @@ button {
 }
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: var(--roboto);
-} 
-.weather {
-  width: 900px;
-  padding: 1rem;
-  margin-top: 0.3rem;
-  margin-inline: auto;
-  border-radius: 10px;
-  background-image: linear-gradient(160deg, #ff872c, rgb(255, 192, 34));
-  box-shadow: 0px 1px 2px #000000d2, 0px -2px 2px #ffffff95;
-}
-.weather .citiesList {
+}   
+.signSelectingSec {
+  height: 50vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
-  margin-block: 2.5rem;
+  gap: 3rem;
 }
-.weather .citiesList .cityNames {
-  font-size: 1.6rem;
+.signSelectingSec .instructionMessage {
+  font-size: 2.5rem;
+}
+.signSelectingSec .signContainer {
+  font-size: 6.5rem;
   letter-spacing: 1px;
-  color: var(--primary-color);
+}
+.signSelectingSec .signContainer .sign {
+  display: inline-block;  
   cursor: pointer;
 }
-.weather .citiesList .cityNames:hover {
-  color: #eaeaea;
-}
-.weather .inputsWrapper {
-  width: 55%;
-  margin-inline: auto;
-  margin-block: 1rem;
-}
-.dot {
-  font-size: 1.5rem;
+.signSelectingSec .signContainer #cross {
+  margin-inline: 2rem;
   position: relative;
-  top: -15px;
-}
-.cityTemp .dot {
-  top: -25px;
-}
-.weather .inputsWrapper #cityInput {
-  font-size: 1.7rem;
-  padding: 1rem 1.2rem;
-  border-radius: 30px;
-  border: none;
-  color: #fafafa;
-  box-shadow: 0px 0px 1px #ffffff8e, 0px 1px 1px #000000c3;
-  background-color: transparent;
-}
-.weather .inputsWrapper #cityInput:focus {
-  outline: none;
-  background-color: transparent;
-}
-.weather .inputsWrapper #cityInput::placeholder {
-  font-size: 1.2rem;
-  padding: 0.5rem 0.1rem;
-  color: #f6f6f6;
-}
-.weather .inputsWrapper #searchBtn {
-  width: 65px;
-  height: 65px;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  margin-left: 1rem;
-  box-shadow: 0px 0px 1px #ffffff8e, 0px 1px 1px #000000;
-  color: var(--primary-color);
-}
-.weather .inputsWrapper #searchBtn:hover {
-  background-color: #ffffff1d;
-}
-.weatherDetailsContainer {
-  margin-block: 2rem;
-}
-.weatherDetailsContainer p {
-  margin-block: 1rem;
-  text-align: center;
-  color: var(--primary-color);
-}
-.weatherDetailsContainer .cityName {
-  font-size: 2rem;
-  letter-spacing: 2px;
-}
-.weatherDetailsContainer .cityWeather {
-  font-size: 1.5rem;
-  margin-block: 1.5rem;
-  letter-spacing: 1px;
-}
-.weatherDetailsContainer .currentTempDetails {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.weatherDetailsContainer .currentTempDetails .imgWrapper {
-  width: 150px;
-  height: 150px;
+  width: 6px;
+  height: 80px;
+  background-color: brown;
+  transform: rotate(40deg);
 }
 
-.weatherDetailsContainer .currentTempDetails .imgWrapper img {
+.signSelectingSec .signContainer #cross::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+  transform: rotate(-80deg);
+}
+.signSelectingSec .signContainer #zero {
+  margin-inline: 1rem;
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 6px solid brown;
+}
+.boxesWrapper {
+  width: 700px;
+  margin-block: 2rem;
+  display: none;
+  margin-inline: auto;
+  flex-wrap: wrap;
+}
+.boxesWrapper .box {
+  width: 30%;
+  aspect-ratio: 1/ 1;
+  padding: 1rem;
+  cursor: pointer;
+}
+.boxesWrapper .firstRow {
+  border-bottom: 4px solid #000;
+}
+.boxesWrapper .secRow {
+  border-bottom: 4px solid #000;
+}
+.boxesWrapper .secCol {
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+}
+.playersScoreSec {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+}
+.playersScoreSec :is(.crossContainer, .zeroContainer) {
+  background-color: brown;
+  color: #f1f1f1;
+  font-size: 4rem;
+  padding: 0.5rem 2rem 0.5rem 0.7rem;
+  text-align: left;
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+}
+.playersScoreSec :is(.crossContainer, .zeroContainer) .score {
+  padding-left: 1rem;
+}
+.restartBtnWrapper {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 241, 241, 0.76);
+}
+.restartBtnWrapper #winMessage {
+  position: relative;
+  top: 20%;
+  font-size: 5rem;
+  color: brown;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  animation: bottomSlider 400ms ease-in-out;
+}
+@keyframes bottomSlider {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 22%;
+  }
+}
+#restartBtn {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: brown;
+  color: #f1f1f1;
+}
+#restartBtn:focus {
+  outline: none;
+}
+
+.circle {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center;
+  border-radius: 50%;
+  border: 10px solid #000;
 }
-
-.weatherDetailsContainer .currentTempDetails .cityTemp {
-  font-size: 3.5rem;
-  letter-spacing: 4px;
-  font-weight: bold;
+.cross {
+  position: relative;
+  width: 12px;
+  height: 100%;
+  background-color: #000;
+  left: 50%;
+  transform: rotate(40deg);
 }
-.weatherDetailsContainer .currentTempDetails .otherDetails .humidityWindSpeedSecs {
-  display: flex;
-  align-items: center;
-  margin-block: 0.5rem;
-}
-.weatherDetailsContainer .currentTempDetails .otherDetails .humidityWindSpeedSecs h4 {
-  font-size: 1.1rem;
-  color: var(--primary-color);
-}
-.weatherDetailsContainer .currentTempDetails .otherDetails .humidityWindSpeedSecs i {
-  font-size: 1.5rem;
-  padding-right: 0.6rem;
-  color: var(--primary-color);
-}
-.weatherDetailsContainer .currentTempDetails .otherDetails .humidityWindSpeedSecs #humidityIcon {
-  width: 30px;
-  height: 30px;
-  margin-right: 0.6rem;
-}
-.weatherDetailsContainer .currentTempDetails .otherDetails .humidityWindSpeedSecs :is(#humidity, #windSpeed) {
-  font-size: 1.4rem; 
-  margin-left: 0.3rem;
-  color: var(--primary-color);
-}
+.cross::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transform: rotate(-80deg);
+} 
