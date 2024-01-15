@@ -1,91 +1,81 @@
-const boxesContainer = document.querySelector(".boxesWrapper");
-const signsContainer = document.querySelector(".signContainer");
-const boxes = document.querySelectorAll(".box");
-const crossScore = document.querySelector("#crossScore");
-const zeroScore = document.querySelector("#zeroScore");
-const restartBtn = document.querySelector("#restartBtn");
-const winMessage = document.querySelector("#winMessage");
+const taskInput = document.querySelector("#taskInputField");
+const taskAddBtn = document.querySelector("#taskAddBtn");
+const tasksSection = document.querySelector(".tasksSection");
+const taskCategoriesSec = document.querySelector(".taskCategoriesSec");
+const taskWrappers = [];
 
-
-let currSign;
-let numOfSlots = 9;
-function showSignSeclecingSec() {
-    document.querySelector(".signSelectingSec").style.display = "flex";
-    boxesContainer.style.display = "none";    
-}
-
-function hideSignSeclecingSec() {
-    document.querySelector(".signSelectingSec").style.display = "none";
-    boxesContainer.style.display = "flex";    
-}
-
-signsContainer.addEventListener("click", (e) => {
-    if (e.target.id === "cross") {
-        currSign = "X";
-        hideSignSeclecingSec()        
-    } else if (e.target.id === "zero") {
-        currSign = "O";
-        hideSignSeclecingSec()
+function showTasks (filterFuntion) {
+    taskWrappers.forEach(taskContainer => {
+    if (!filterFuntion || filterFuntion(taskContainer)) {
+       taskContainer.style.display = "flex"; 
+    } else {
+        taskContainer.style.display = "none"; 
     }
-})
-
-function restartGame () {
-    currSign = "";
-    numOfSlots = 9;
-    boxes.forEach(box => {
-        box.innerHTML = "";
-        box.setAttribute("isClicked", "false");
-        box.classList.remove("X");
-        box.classList.remove("O");
     });
-    restartBtn.parentElement.style.display = "none";
-    showSignSeclecingSec();
 }
 
-function checkWinner (sign) {
-    const winingCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];            
-    for (let combination of winingCombinations) {
-        if (combination.every(index => boxes[index].classList.contains(sign))) {
-            return true;
-        }
+
+function taskCompleted (taskWrapper) {
+    const isuncompleted = taskWrapper.id === "uncomplete"; 
+    isuncompleted ? taskWrapper.id = "complete" : taskWrapper.id = "uncomplete";
+    taskWrapper.firstElementChild.style.textDecoration = isuncompleted ? "line-through" : "none";
+}
+
+function deletingTask (taskWrapper) {
+    taskWrappers.splice(taskWrappers.indexOf(taskWrapper), 1);
+    tasksSection.removeChild(taskWrapper);
+}
+
+function creatingTask (task) {
+    const taskWrapper = document.createElement("div");
+    const taskContent = document.createElement("p");
+    const taskBtnsWrapper = document.createElement("div");
+    const taskCompleteBtn = document.createElement("button"); 
+    const taskDeleteBtn = document.createElement("button"); 
+
+    taskContent.textContent = `${task}`;
+    taskCompleteBtn.innerHTML = `&checkmark;`;
+    taskDeleteBtn.innerHTML = `&Cross;`;
+
+    taskWrapper.classList.add("taskContainer");
+    taskWrapper.setAttribute("id", "uncomplete");
+    taskContent.classList.add("task");
+    taskBtnsWrapper.classList.add("taskBtns");
+    taskCompleteBtn.classList.add("complete");
+    taskDeleteBtn.classList.add("del");
+
+    tasksSection.appendChild(taskWrapper);
+    taskWrapper.append(taskContent, taskBtnsWrapper);
+    taskBtnsWrapper.append(taskCompleteBtn, taskDeleteBtn);
+
+    taskCompleteBtn.addEventListener("click", () => {
+        taskCompleted(taskWrapper);
+    });
+
+    taskDeleteBtn.addEventListener("click", () => {
+        deletingTask(taskWrapper)
+    });
+
+    return taskWrapper;
+}
+
+
+taskAddBtn.addEventListener("click", (e) => {
+    const task = taskInput.value;
+    if (task) {
+        taskWrappers.push(creatingTask(task));
+        taskCategoriesSec.value = "all";
+        showTasks();
     }
-    return false;
-}
-
-function displayingSigns (e) {
-    numOfSlots--;
-    if (currSign === "X") {
-        e.target.innerHTML = `<div class="cross"></div>`;
-        e.target.classList.add(currSign);
-
-        if (checkWinner(currSign)) {    
-            crossScore.textContent = `${parseInt(crossScore.textContent) + 1}`;
-        }
-    } else if (currSign === "O") {
-        e.target.innerHTML = `<div class="circle"></div>`;
-        e.target.classList.add(currSign);
-
-        if (checkWinner(currSign)) {
-            zeroScore.textContent = `${parseInt(zeroScore.textContent) + 1}`;
-        }
-    }
-    if (checkWinner(currSign))  {
-        restartBtn.parentElement.style.display = "block";
-        winMessage.innerHTML = `${currSign} Wins`;
-    } else if (numOfSlots === 0) {
-        restartBtn.parentElement.style.display = "block";
-        winMessage.innerHTML = `Draw`;
-    } 
-    currSign = (currSign === "O") ? "X" : "O"; 
-}
-restartBtn.addEventListener("click", restartGame);
-
-boxesContainer.addEventListener("click", (e) => {
-    if (currSign) {
-        let isClicked = e.target.getAttribute("isClicked");
-        if (isClicked === "false") {
-            displayingSigns(e);
-            e.target.setAttribute("isClicked", "true");
+    taskCategoriesSec.addEventListener("change", () => {
+        const selectedCategory = taskCategoriesSec.value;
+        if (selectedCategory === "completed") {
+            showTasks(taskWrapper => taskWrapper.id === "complete")
+        } else if (selectedCategory === "uncompleted") {
+            showTasks(taskWrapper => taskWrapper.id === "uncomplete");
+        } else  {
+            showTasks();
         } 
-    }
+    })
+    taskInput.value = "";
 });

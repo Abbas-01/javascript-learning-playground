@@ -25,151 +25,91 @@ button {
 body {
   height: 100vh;
   font-family: var(--roboto);
+  background-color: #ffc176
 }   
-.signSelectingSec {
-  height: 50vh;
+.to-do-list {
+  width: 800px;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-inline: auto;
+}
+.to-do-list h1 {
+  font-size: 3rem;
+  margin-block: 2rem;
+  text-align: center;
+  color: #fff;
+}
+.to-do-list .toDoListInputsSec {
+  width: 95%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
-.signSelectingSec .instructionMessage {
-  font-size: 2.5rem;
-}
-.signSelectingSec .signContainer {
-  font-size: 6.5rem;
-  letter-spacing: 1px;
-}
-.signSelectingSec .signContainer .sign {
-  display: inline-block;  
-  cursor: pointer;
-}
-.signSelectingSec .signContainer #cross {
-  margin-inline: 2rem;
-  position: relative;
-  width: 6px;
-  height: 80px;
-  background-color: brown;
-  transform: rotate(40deg);
-}
-
-.signSelectingSec .signContainer #cross::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-color: brown;
-  transform: rotate(-80deg);
-}
-.signSelectingSec .signContainer #zero {
-  margin-inline: 1rem;
-  width: 80px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  border: 6px solid brown;
-}
-.boxesWrapper {
-  width: 700px;
-  margin-block: 2rem;
-  display: none;
-  margin-inline: auto;
-  flex-wrap: wrap;
-}
-.boxesWrapper .box {
-  width: 30%;
-  aspect-ratio: 1/ 1;
-  padding: 1rem;
-  cursor: pointer;
-}
-.boxesWrapper .firstRow {
-  border-bottom: 4px solid #000;
-}
-.boxesWrapper .secRow {
-  border-bottom: 4px solid #000;
-}
-.boxesWrapper .secCol {
-  border-left: 4px solid #000;
-  border-right: 4px solid #000;
-}
-.playersScoreSec {
-  display: flex;
-  justify-content: center;
-  gap: 7rem;
-}
-.playersScoreSec :is(.crossContainer, .zeroContainer) {
-  background-color: brown;
-  color: #f1f1f1;
-  font-size: 4rem;
-  padding: 0.5rem 2rem 0.5rem 0.7rem;
-  text-align: left;
-  letter-spacing: 1.5px;
-  border-radius: 5px;
-}
-.playersScoreSec :is(.crossContainer, .zeroContainer) .score {
-  padding-left: 1rem;
-}
-.restartBtnWrapper {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(255, 241, 241, 0.76);
-}
-.restartBtnWrapper #winMessage {
-  position: relative;
-  top: 20%;
-  font-size: 5rem;
-  color: brown;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-align: center;
-  animation: bottomSlider 400ms ease-in-out;
-}
-@keyframes bottomSlider {
-  0% {
-    top: -10%;
-  }
-  100% {
-    top: 22%;
-  }
-}
-#restartBtn {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
+.to-do-list .toDoListInputsSec #taskInputField {
+  width: 85%;
+  height: 60px;
+  font-size: 1.7rem;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
-  background-color: brown;
-  color: #f1f1f1;
+  box-shadow: 0px 0px 2px #fff, 0px 1px 1px #000000ac;
 }
-#restartBtn:focus {
-  outline: none;
+.to-do-list .toDoListInputsSec #taskInputField::placeholder {
+  font-size: 1.2rem;
+}
+.to-do-list .toDoListInputsSec #taskAddBtn {
+  width: 75px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  border: 3px solid #fff;
+  font-size: 2.5rem;
+  background-color: #ffb121;
+  color: #fff;
+}
+.to-do-list .toDoListInputsSec .taskCategoriesSec {
+  width: 160px;
+  font-size: 1.1rem;
+  padding: 1rem 0.6rem;
+  border-radius: 40px;
+  border: none;
+  color: #ffb121;
+  box-shadow: 0px 0px 1px #fff, 0px 1px 1px #00000084;
+}
+.to-do-list .toDoListInputsSec .taskCategoriesSec option {
+  font-size: 1.2rem;
+  padding: 0.4rem 0.5rem;
+  border: none;
 }
 
-.circle {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+.to-do-list .tasksSection {
+  margin-top: 2rem;
+}
+
+.to-do-list .tasksSection .taskContainer {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-bottom: 2px solid #fff;
+}
+.to-do-list .tasksSection .taskContainer .task {
+  font-size: 1.7rem;
+  color: #fff;
+}
+.to-do-list .tasksSection .taskContainer .taskBtns {
+  display: flex;
+  gap: 1rem;
+}
+.to-do-list .tasksSection .taskContainer .taskBtns button {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: 10px solid #000;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #ffa41b;
+  color: #fff;
+  /* padding: 0.1rem 1rem; */
 }
-.cross {
-  position: relative;
-  width: 12px;
-  height: 100%;
-  background-color: #000;
-  left: 50%;
-  transform: rotate(40deg);
-}
-.cross::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  transform: rotate(-80deg);
-} 

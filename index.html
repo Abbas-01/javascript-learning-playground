@@ -10,48 +10,23 @@
 </head>
 
 <body>
-    <div class="signSelectingSec">
-        <p class="instructionMessage">Please select a sign first:</p>
-        <p class="signContainer">
-            <span class="sign" id="cross"></span> |
-            <span class="sign" id="zero"></span>
-        </p>
+
+    <div class="to-do-list">
+        <h1>To Do List</h1>
+        <div class="toDoListInputsSec">
+            <input type="text" id="taskInputField" placeholder="Write your task...">
+            <button id="taskAddBtn">+</button>
+            <select class="taskCategoriesSec">
+                <option value="all" id="allTasks" selected>All</option>
+                <option value="completed" id="CompletedTasks">Completed</option>
+                <option value="uncompleted" id="unCompletedTasks">Uncompleted</option>
+            </select>
+        </div>
+        <div class="tasksSection">
+        </div>
     </div>
 
-    <ul class="boxesWrapper">
-        <li isClicked="false" class="box firstRow" id="box1">
-        </li>
-        <li isClicked="false" class="box firstRow secCol" id="box2">
-        </li>
-        <li isClicked="false" class="box firstRow" id="box3">
-        </li>
-        <li isClicked="false" class="box secRow" id="box4">
-        </li>
-        <li isClicked="false" class="box secRow secCol" id="box5">
-        </li>
-        <li isClicked="false" class="box secRow " id="box6">
-        </li>
-        <li isClicked="false" class="box thirdRow" id="box7">
-        </li>
-        <li isClicked="false" class="box thirdRow secCol" id="box8">
-        </li>
-        <li isClicked="false" class="box thirdRow" id="box9">
-        </li>
-    </ul>
 
-    <div class="playersScoreSec">
-        <p class="crossContainer">
-            X:<span class="score" id="crossScore">0</span>
-        </p>
-        <p class="zeroContainer">
-            O:<span class="score" id="zeroScore">0</span>
-        </p>
-    </div>
-
-    <div class="restartBtnWrapper">
-        <button id="restartBtn">Restart Game</button>
-        <p id="winMessage"></p>
-    </div>
     <script src="index.js"></script>
 </body>
 
