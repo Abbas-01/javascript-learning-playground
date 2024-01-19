@@ -1,14 +1,17 @@
-function UsersDetails (name, age, password) {
-    this.name =  name;
-    this.age = age;
-    this.password = password;
-    this.greetings = function() {
-        return `Hello, My name is ${name}`;
-    }
+function playersDetails (playerName, slotNumber) {
+    this.playerName = playerName;
+    this.slotNumber = slotNumber;
 }
-const userOne = new UsersDetails("Abbas", 16, "Hello_World!");
-const userTwo = new UsersDetails("Asad", 16, "Hello_Universe!");
 
-console.log(userOne.constructor);
-console.log(userOne.greetings());
-console.log(userTwo.greetings());
+playersDetails.prototype.playerIntro = function () {
+    console.log(`${this.playerName} from Team number ${this.slotNumber}`);
+};
+const playerOne = new playersDetails("Abbas", 5);
+const playerTwo = new playersDetails("Hanzala", 8);
+
+console.log(playerOne.playerName);
+console.log(playerOne.slotNumber);
+console.log(playerTwo.playerName);
+playerOne.playerIntro()
+playerTwo.playerIntro()
+
