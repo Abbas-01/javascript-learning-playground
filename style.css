@@ -27,36 +27,3 @@ body {
   align-items: center;
 }   
 
-.imgSlider {
-  width: 800px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  margin-inline: auto;
-}
-.imgSlider button {
-  flex-basis: 10%;
-  aspect-ratio: 1 / 1;
-  background-color: transparent;
-  border-radius: 50%;
-  border: none;
-}
-.imgSlider button img {
-  width: 100%;
-  aspect-ratio: 1/ 1;
-}
-.imgSlider .imagesContainer {
-  flex-basis: 62%;
-  display: flex;
-  overflow: hidden;
-  border-radius: 10%;
-}
-.imgSlider .imagesContainer img {
-  width: 100%;
-  position: relative;
-  right: 0%;
-  object-fit: cover;
-  object-position: center;
-  transition: right 400ms ease;
-}
