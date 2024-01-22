@@ -1,17 +1,15 @@
-function playersDetails (playerName, slotNumber) {
-    this.playerName = playerName;
-    this.slotNumber = slotNumber;
+class Users {
+    constructor(userName, email, age) {
+        this.userName = userName;
+        this.email = email;
+        this.age = age;
+    }
+    intro () {
+        return `Hello! my name is ${this.userName}`
+    }
 }
 
-playersDetails.prototype.playerIntro = function () {
-    console.log(`${this.playerName} from Team number ${this.slotNumber}`);
-};
-const playerOne = new playersDetails("Abbas", 5);
-const playerTwo = new playersDetails("Hanzala", 8);
-
-console.log(playerOne.playerName);
-console.log(playerOne.slotNumber);
-console.log(playerTwo.playerName);
-playerOne.playerIntro()
-playerTwo.playerIntro()
-
+const userOne = new Users("Abbas", "abbashere786@gmail.com", 16);
+console.log(userOne.userName)
+console.log(userOne.intro())
+console.log(userOne.email)
