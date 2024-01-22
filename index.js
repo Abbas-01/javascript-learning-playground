@@ -16,9 +16,15 @@ class Users {
     }
 }
 
+class Developer extends Users {
+    constructor(userName, team) {
+        super(userName);
+        this.team = team;
+    }
+} 
 const userOne = new Users("Abbas", "abbashere786@gmail.com", "atsa1122", 16);
+const employeeOne = new Developer("Arpit", "Frontend");
+console.log(employeeOne.userName);
+console.log(employeeOne.team);
+console.log(employeeOne.intro());
 console.log(userOne.userName);
-console.log(userOne.intro());
-console.log(userOne.email);
-console.log(userOne.valThis());
-console.log(userOne.userPassword())
