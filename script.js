@@ -1,5 +1,6 @@
-import * as funcs from "./index.js";
-console.log(funcs.greetings());
-console.log(funcs.intro("Abbas", "Badin"));
-console.log(funcs.hobbies);
+import favouriteFood, {greetings, intro, hobbies} from "./index.js";
+console.log(greetings());
+console.log(intro("Abbas", "Badin"));
+console.log(hobbies);
+console.log(favouriteFood("Burger"))
 
