@@ -10,9 +10,101 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <p class="logo">Brand</p>
+            <ul>
+                <li>Shop</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+            <a href="cart.html" class="cartWrapper" target="_blank">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="numberOfItems">0</span>
+            </a>
+        </nav>
+    </header>
     
-    <script type="module" src="index.js"></script>
-    <script type="module" src="script.js"></script>
+
+    <div class="cardsContainer">
+        <div class="cardOne card" id="cardOne">
+            <div class="imgSlider">
+                <div class="imagesWrapper">
+                    <img class="productImg" src="img/520a830a330b4181ac89ad1a00ae109b_9366.webp">
+                    <img class="productImg" src="img/A11-923s.jpg">
+                    <img class="productImg" src="img/C74-256s.jpg">
+                </div>
+                <div class="dotsWrapper">
+                    <span class="dots" id="dotOne"></span>
+                    <span class="dots" id="dotTwo"></span>
+                    <span class="dots" id="dotThree"></span>
+                </div>
+            </div>
+            <p class="productName">Lorem ipsum dolor sit</p>
+            <p class="productPriceWrapper">
+                <span class="productPrice">28.55</span>$
+            </p>
+            <button data-Clicked="false" class="addToCartBtn">Add to Cart +</button>
+        </div>
+        <div class="cardTwo card" id="cardTwo">
+            <div class="imgSlider">
+                <div class="imagesWrapper">
+                    <img class="productImg" src="img/A11-923s.jpg">
+                    <img class="productImg" src="img/520a830a330b4181ac89ad1a00ae109b_9366.webp">
+                    <img class="productImg" src="img/C74-256s.jpg">
+                </div>
+                <div class="dotsWrapper">
+                    <span class="dots" id="dotOne"></span>
+                    <span class="dots" id="dotTwo"></span>
+                    <span class="dots" id="dotThree"></span>
+                </div>
+            </div >
+            <p class="productName">Lorem ipsum dolor sit</p>
+            <p class="productPriceWrapper">
+                <span class="productPrice">21.99</span>$
+            </p>
+            <button data-Clicked="false" class="addToCartBtn">Add to Cart +</button>
+        </div>
+        <div class="cardThree card" id="cardThree">
+            <div class="imgSlider">
+                <div class="imagesWrapper">
+                    <img class="productImg" src="img/C01588.jpg">
+                    <img class="productImg" src="img/520a830a330b4181ac89ad1a00ae109b_9366.webp">
+                    <img class="productImg" src="img/A11-923s.jpg">
+                </div>
+                <div class="dotsWrapper">
+                    <span class="dots" id="dotOne"></span>
+                    <span class="dots" id="dotTwo"></span>
+                    <span class="dots" id="dotThree"></span>
+                </div>
+            </div >
+            <p class="productName">Lorem ipsum dolor sit</p>
+            <p class="productPriceWrapper">
+                <span class="productPrice">35.99</span>$
+            </p>
+            <button data-Clicked="false" class="addToCartBtn">Add to Cart +</button>
+        </div>
+        <div class="cardFour card" id="cardFour"> 
+            <div class="imgSlider">
+                <div class="imagesWrapper">
+                    <img class="productImg" src="img/C74-256s.jpg">
+                    <img class="productImg" src="img/520a830a330b4181ac89ad1a00ae109b_9366.webp">
+                    <img class="productImg" src="img/A11-923s.jpg">
+                </div>
+                <div class="dotsWrapper">
+                    <span class="dots" id="dotOne"></span>
+                    <span class="dots" id="dotTwo"></span>
+                    <span class="dots" id="dotThree"></span>
+                </div>
+            </div >
+            <p class="productName">Lorem ipsum dolor sit</p>
+            <p class="productPriceWrapper">
+                <span class="productPrice">89.99</span>$
+            </p>
+            <button data-Clicked="false" class="addToCartBtn">Add to Cart +</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
