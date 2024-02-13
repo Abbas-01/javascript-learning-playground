@@ -21,174 +21,113 @@ button {
   cursor: pointer;
 }
 body {
+  height: 100vh;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } 
-.gameContainer {
-  display: flex;
-  justify-content: space-around;
-}
-.hangmanSec {
+
+.clock {
   position: relative;
-  width: 700px;
-  height: 700px;
-}
-.hangmanSec .vertical {
-  position: absolute;
-  width: 4px;
-  height: 525px;
-  background-color: #000;
-  top: 13%;
-  left: 15%;
-}
-.hangmanSec .horizontal {
-  position: absolute;
-  width: 375px;
-  height: 4px;
-  background-color: #000;
-  top: 13%;
-  left: 15%;
-}
-.hangmanSec .rope {
-  position: absolute;
-  width: 4px;
-  height: 130px;
-  top: 13%;
-  right: 31%;
-  background-color: #000;
-}
-.hangmanSec .hangmanFigure {
   width: 300px;
-  top: 31.5%;
-  left: 47.5%;
-  position: relative;
-}
-.hangmanSec .hangmanFigure .head{
-  display: none;
-  width: 80px;
-  aspect-ratio: 1/ 1;
-  margin-inline: auto;
-  border: 2px solid #000;
+  height: 300px;
   border-radius: 50%;
+  border: 2px solid #000;
+  background-color: rgb(51, 51, 100);
 }
-.hangmanSec .hangmanFigure .chest {
-  display: none;
-  width: 3px;
-  height: 150px;
-  margin-inline: auto;
-  background-color: #000;
-}
-.hangmanSec .hangmanFigure .hands {
-  width: 2px;
-  height: 90px;
-  position: absolute;
-  top: 100px;
-  background-color: #000;
-}
-.hangmanSec .hangmanFigure .rightHand {
-  display: none;
-  left: 42%;
-  rotate: 30deg;
-}
-.hangmanSec .hangmanFigure .leftHand {
-  display: none;
-  right: 42%;
-  rotate: -30deg;
-}
-.hangmanSec .hangmanFigure .legs {
-  width: 2px;
-  height: 100px;
-  position: relative;
-  background-color: #000;
-}
-.hangmanSec .hangmanFigure .rightLeg {
-  display: none;
-  bottom: 9px;
-  left: 40%;
-  rotate: 35deg;
-}
-.hangmanSec .hangmanFigure .leftLeg {
-  display: none;
-  bottom: 110px;
-  left: 59%;
-  rotate: -35deg;
-}
-.hangmanSec .floor {
-  position: absolute;
-  width: 550px;
-  height: 4px;
-  background-color: #000;
-  bottom: 12%;
-  left: 10%;
-}
-.guessingSec {
-  width: 900px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-.GuessingPhraseSec {
-  margin-block: 2rem;
-}
-.GuessingPhraseSec span {
-  font-size: 3rem;
-  padding: 0.5rem 1rem;
-  margin-inline: 0.5rem;
-  border-bottom: 2px solid #000;
-}
-.hint {
+.clock .digits {
   font-size: 1.8rem;
-}
-.incorrectGuessesCountSec {
-  font-size: 1.8rem;
-}
-.keyboardBtnsSec {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.keyboardBtnsSec button {
-  width: 80px;
-  height: 80px;
-  background-color: saddlebrown;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 3rem;
-}
-.keyboardBtnsSec .guessed {
-  background-color: rgb(140, 92, 45);
-}
-.gameRestartSec {
   position: absolute;
-  width: 600px;
-  height: 400px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
+}
+.clock .twelve {
+  font-size: 2.5rem;
+  top: 0;
+  left: 50%;
+  translate: -50%;
+}
+.one {
+  top: 1.8rem;
+  left: 70%;
+}
+.two {
+  top: 4rem;
+  right: 12%;
+}
+.clock .three {
+  font-size: 2.5rem;
+  top: 8rem;
+  right: 8%;
+}
+.four {
+  top: 13rem;
+  right: 12%;
+}
+.five {
+  bottom: 1rem;
+  right: 30%;
+}
+.clock .six {
+  font-size: 2.5rem;
+  bottom: 0rem;
+  right: 50%;
+}
+.seven {
+  bottom: 1.5rem;
+  left: 25%;
+}
+.eight {
+  bottom: 24%;
+  left: 1.5rem;
+}
+.clock .nine {
+  font-size: 2.5rem;
+  bottom: 45%;
+  left: 1rem;
+}
+.ten {
+  top: 20%;
+  left: 2rem;
+}
+.eleven {
+  top: 7%;
+  left: 4.5rem;
+}
+.clock .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  translate: -50%, -50%;
+  z-index: 100;
+}
+.clock .clockHands {
+  position: absolute;
   top: 50%;
   left: 50%;
-  padding: 1rem;
-  translate: -50% -50%;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2px #000;
+  translate: -50%, -50%;
+  rotate: 180deg;
+  transform-origin: top;
 }
-.gameRestartSec button {
-  width: 60%;
-  font-size: 4rem;
-  border: none;
-  background-color: saddlebrown;
-  color: #fff;
-  border-radius: 5px;
-  padding: 0.5rem 1.5rem;
-  letter-spacing: 2px;
+.clock .secHand {
+  width: 1px;
+  height: 95px;  
+  z-index: 10;
+  background-color: rgb(9, 57, 1);
 }
-.gameRestartSec p {
-  text-align: center;
-  line-height: 1.4;
-  font-size: 2rem;
+.clock .minHand {
+  width: 2px;
+  height: 80px;
+  border-radius: 20px;
+  background-color: lightgreen;
+  z-index: 5;
+}
+.clock .hourHand {
+  width: 4px;
+  height: 70px;  
+  border-radius: 30px;
+  background-color: rgb(67, 95, 67);
 }
