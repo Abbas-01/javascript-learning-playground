@@ -1,3 +1,7 @@
-const nums = [1, 2, 3, 4, 5, 6];
-let result = nums.some((num) => num > 5);
-console.log(result)
+let x = [10, 2, 1, 3, 5];
+x.sort((a, b) => {
+    console.log(a);
+    console.log(b);
+    return a - b
+});
+console.log(x)
