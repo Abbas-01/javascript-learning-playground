@@ -14,5 +14,5 @@ const users = [
     }
 ]
 
-users.sort((a, b) => a.born - b.born);
+users.sort((a, b) => b.born - a.born);
 console.log(users)
