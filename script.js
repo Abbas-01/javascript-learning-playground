@@ -1,7 +1,18 @@
-let x = [10, 2, 1, 3, 5];
-x.sort((a, b) => {
-    console.log(a);
-    console.log(b);
-    return a - b
-});
-console.log(x)
+const users = [
+    {
+        name: "Abbas",
+        born: 2008
+    }, {
+        name: "Asad",
+        born: 2007
+    }, {
+        name: "Farzain",
+        born: 2009
+    }, {
+        name: "Hanzala",
+        born: 2002
+    }
+]
+
+users.sort((a, b) => a.born - b.born);
+console.log(users)
