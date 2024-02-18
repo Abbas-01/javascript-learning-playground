@@ -11,6 +11,32 @@
 
 <body>
 
+    <p class="quizStrtBtnWrapper">
+        <button class="quizStrtBtn">Start</button>
+    </p>
+    <section class="quizSec">
+        <h1 id="title">Quiz</h1>
+        <div class="timer">
+            <i class="fa-solid fa-stopwatch"></i>
+            <span class="secs">10</span>
+        </div>
+        <hr>
+        <section class="quizQuestionSec">
+            <p class="quizQuestion"></p>
+            <ul class="optionsWrapper"></ul>
+            <p class="nxtQuizBtnWrapper" >
+                <button class="nxtQuizBtn" disabled>Next</button>
+            </p>
+        </section>
+        <section class="quizResultSec">
+            <p class="result">Your Score is 5 out of <span class="noOfCorrectAns">0</span></p>
+            <p class="restartQuizBtnWrapper">
+                <button class="restartQuizBtn">Restart</button>
+            </p>
+        </section>
+    </section>
+
+    <script src="question.js"></script>
     <script src="script.js"></script>
 </body>
 
